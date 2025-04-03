@@ -1,0 +1,9 @@
+{
+    "name": "tmdivi/timeline-module-for-divi",
+    "autoload": {
+      "psr-4": {
+        "TMDIVI\\Modules\\": "server/Modules/"
+      }
+    },
+    "require": {}
+  }

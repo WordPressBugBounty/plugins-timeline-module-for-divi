@@ -1,0 +1,442 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Timeline Module For Divi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-15 06:44+0000\n"
+"PO-Revision-Date: 2024-07-15 06:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hindi\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.5.5\n"
+"X-Domain: timeline-module-for-divi"
+
+#. 1: Plugin name, 2: Theme name
+#: timeline-module-for-divi.php:75
+#, php-format
+msgid "%1$s requires %2$s to be installed and activated."
+msgstr ""
+
+#. Description of the plugin
+msgid "A timeline module for Divi"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:174
+msgid "Alt Text"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:46
+#: includes/modules/Timeline/Timeline.php:106
+msgid "Background"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:79
+msgid "Border"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:97
+msgid "Both Side"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:168
+msgid "Choose an Image"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:59
+msgid "Container Settings"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:182
+msgid "Content"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:28
+msgid "Cool Timeline"
+msgstr ""
+
+#. Author of the plugin
+msgid "CoolPlugins"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:236
+msgid "Date Label Font"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:240
+msgid "Date Label Font Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:244
+msgid "Date Label Font Size"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:44
+msgid "Demo"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:396
+msgid "Description Align"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:390
+msgid "Description Background Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:429
+msgid "Description Custom Padding"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:481
+msgid "Description Font"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:384
+msgid "Description Font Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:417
+msgid "Description Line Height"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:65
+msgid "Description Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:405
+msgid "Description Text Size"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:97
+msgid "Display Label / Year"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:134
+msgid "Display Story Icon"
+msgstr ""
+
+#: timeline-module-for-divi.php:80
+msgid "Divi (Theme)"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:185
+msgid "Enter description for the story."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:121
+msgid "Enter Label / Date."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:103
+#: includes/modules/TimelineChild/TimelineChild.php:110
+msgid "Enter Label / Year."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:133
+msgid "Gap Between Labels"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:195
+#: includes/modules/TimelineChild/TimelineChild.php:101
+msgid "Hide"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:138
+msgid "Hide Icon"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://coolplugins.net"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://cooltimeline.com"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:211
+msgid "Icon / Dot Background Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:213
+msgid "Icon / Dot Background Color."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:218
+msgid "Icon / Text Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:220
+msgid "Icon / Text Color."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:71
+msgid "Icon Settings"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:177
+msgid "Image Alt Text."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:118
+msgid "Label / Date"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:108
+msgid "Label / Year"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:282
+msgid "Label / Year Font"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:225
+msgid "Label Styling"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:56
+msgid "Labels Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:123
+msgid "Labels/Icons Position"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:172
+msgid "Line Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:201
+msgid "Line fill Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:68
+msgid "Line Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:179
+msgid "Line Width"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:98
+msgid "One Side (left)"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:99
+msgid "One Side (right)"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:146
+msgid "Select Icon"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:169
+msgid "Set As Image"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:194
+#: includes/modules/TimelineChild/TimelineChild.php:100
+msgid "Show"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:141
+msgid "Show custom milestone icon with story."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:137
+msgid "Show Icon"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:191
+msgid "Show Line Filling"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:74
+msgid "Spacing And Position Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:112
+msgid "Spacing And Postion Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:158
+msgid "Spacing Bottom"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:148
+msgid "Spacing Top"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:31
+#: includes/modules/Timeline/Timeline.php:449
+msgid "Story"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:318
+#: includes/modules/TimelineChild/TimelineChild.php:190
+msgid "Story Background Color"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:204
+msgid "Story Description Color"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:211
+msgid "Story Label Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:326
+msgid "Story Padding"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:218
+msgid "Story Sub Label Color"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:157
+msgid "Story Title"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:197
+msgid "Story Title Color"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:160
+msgid "Story Title."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:321
+msgid "Stroy Background Color."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:328
+msgid "Stroy Padding."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:64
+msgid "Style"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:126
+msgid "Sub Label"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:259
+msgid "Sub Label Font"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:263
+msgid "Sub Label Font Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:267
+msgid "Sub Label Font Size"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:129
+msgid "Sub Label."
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:74
+msgid "Subtitle"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:67
+msgid "Texts"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:174
+msgid "Timeline color."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:203
+msgid "Timeline fill effect color."
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:92
+msgid "Timeline Layout"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:53
+msgid "Timeline Layouts"
+msgstr ""
+
+#. Name of the plugin
+#: timeline-module-for-divi.php:79
+msgid "Timeline Module For Divi"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:43
+msgid "Timeline Settings"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:33
+#: includes/modules/TimelineChild/TimelineChild.php:37
+msgid "Timeline Story"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:40
+msgid "Timeline Story Settings"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:71
+msgid "Title"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:345
+msgid "Title Align"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:339
+msgid "Title Background Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:378
+msgid "Title Custom Padding"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:466
+msgid "Title Font"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:333
+msgid "Title Font Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:366
+msgid "Title Line Height"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:62
+msgid "Title Settings"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:354
+msgid "Title Text Size"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:165
+msgid "Upload"
+msgstr ""
+
+#: includes/modules/TimelineChild/TimelineChild.php:167
+msgid "Upload an image"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:290
+msgid "Year Label Background Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:294
+msgid "Year Label Box Size"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:286
+msgid "Year Label Font Color"
+msgstr ""
+
+#: includes/modules/Timeline/Timeline.php:304
+msgid "Year Label Font Size"
+msgstr ""
