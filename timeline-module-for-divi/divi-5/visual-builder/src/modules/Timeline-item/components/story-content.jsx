@@ -24,14 +24,15 @@ class RenderStoryContent extends React.Component{
       this.initializeStories();
     }
     componentDidUpdate(prevProps){
-      if (prevProps.props !== this.props.props) {
+      // if (prevProps.props !== this.props.props) {
+      if (prevProps?.props?.parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value?.timeline_layout !== this.props.props.parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value?.timeline_layout) {
         this.initializeStories();
       }
     }
     initializeStories(){
   
       const {attrs,parentAttrs,elements,id,name,parentId,isFirst,isLast} = this.props.props 
-      const renderLayout = parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value || 'both-side'
+      const renderLayout = parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value?.timeline_layout || 'both-side'
   
       const showIcon = attrs.show_story_icon?.innerContent?.enable?.desktop?.value
 
@@ -61,7 +62,7 @@ class RenderStoryContent extends React.Component{
     render(){
       const {attrs,parentAttrs,elements,id,name,parentId,isFirst,isLast} = this.props.props 
   
-      const renderLayout = parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value || 'both-side'
+      const renderLayout = parentAttrs?.timeline_layout?.advanced?.layout?.desktop?.value?.timeline_layout || 'both-side'
       const story_connector_style = parentAttrs?.story_connector_style?.advanced?.desktop?.value || ''
   
       const media = attrs?.media?.innerContent?.desktop?.value?.src ?? ''

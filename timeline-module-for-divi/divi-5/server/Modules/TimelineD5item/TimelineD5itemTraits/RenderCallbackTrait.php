@@ -22,7 +22,7 @@ trait RenderCallbackTrait {
 
 	  $parent_attrs = $parent->attrs ?? [];
 
-	  $timeline_layout = $parent_attrs['timeline_layout']['advanced']['layout']['desktop']['value'] ?? 'both-side';
+	  $timeline_layout = $parent_attrs['timeline_layout']['advanced']['layout']['desktop']['value']['timeline_layout'] ?? 'both-side';
 
 	  $story_wrapper_class = self::get_story_wrapper_class( $timeline_layout, $story_order);
 	  $icon_classes = self::get_icon_classes( $attrs['show_story_icon']['innerContent']['enable']['desktop']['value'] ?? '');

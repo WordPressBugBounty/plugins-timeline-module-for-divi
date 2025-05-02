@@ -20,7 +20,8 @@ trait RenderCallbackTrait {
 			$block->parsed_block['innerBlocks']
 		) : [];	
 
-		$timeline_layout = $attrs['timeline_layout']['advanced']['layout']['desktop']['value'] ?? 'both-side';
+		$timeline_layout = $attrs['timeline_layout']['advanced']['layout']['desktop']['value']['timeline_layout'] ?? 'both-side';
+
 
 		$timeline_line_filling = $attrs['timeline_fill_setting']['advanced']['desktop']['value'] ?? 'off';
 

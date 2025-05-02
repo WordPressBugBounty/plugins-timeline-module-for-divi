@@ -1,4 +1,4 @@
-import LineFillEffect from "./LineFillEffect";
+import {LineFillEffect} from "./LineFillEffect";
 import {StoryContent, StoryIcon, StoryYearLabel, StoryLabels} from "./StoryLoop";
 
 export {

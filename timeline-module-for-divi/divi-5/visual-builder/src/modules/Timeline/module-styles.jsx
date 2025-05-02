@@ -40,7 +40,8 @@ const TimelineStyles = (props) => {
         attr={attrs?.story_background_color?.advanced}
         declarationFunction={(attrs)=>{
           const data = attrs?.attrValue
-          return `background:${data};`;
+          return `--tw-cbx-bgc:${data};`;
+          // return `background:${data};`;
         }}
       />
 
@@ -157,7 +158,7 @@ const TimelineStyles = (props) => {
         selector={`${orderClass} .tmdivi-vertical-right .tmdivi-story > .tmdivi-arrow`}
         attr={attrs?.story_border_settings?.advanced}
         declarationFunction={(attrs)=>{
-          let css = 'border:3px solid blue !important;';
+          let css = '';
           const data = attrs?.attrValue
           if(data.styles !== undefined){
             if(data.styles.all !== undefined){
@@ -172,7 +173,7 @@ const TimelineStyles = (props) => {
         selector={`${orderClass} .tmdivi-vertical-left .tmdivi-story > .tmdivi-arrow`}
         attr={attrs?.story_border_settings?.advanced}
         declarationFunction={(attrs)=>{
-          let css = 'border:3px solid blue !important;';
+          let css = '';
           const data = attrs?.attrValue
           if(data.styles !== undefined){
             if(data.styles.all !== undefined){
@@ -315,6 +316,21 @@ const TimelineStyles = (props) => {
         }}
       
       />
+
+      <CommonStyle
+        selector={`${orderClass} .tmdivi-wrapper`}
+        attr={attrs?.year_label_box_size?.advanced}
+        declarationFunction={(attrs)=>{
+          let css = '';
+          const data = attrs?.attrValue
+          if(data !== ""){
+            css = `--tw-ybx-size:${data};`;
+          }
+          return css;
+        }}
+      
+      />
+
       <CommonStyle
         selector={`${orderClass} .tmdivi-wrapper`}
         attr={attrs?.story_title?.decoration?.font}
@@ -342,7 +358,7 @@ const TimelineStyles = (props) => {
 
           const elements = document.querySelectorAll(`${orderClass} .tmdivi-wrapper .tmdivi-story .tmdivi-content .tmdivi-description`);
           elements.forEach(el => {
-            if (data.desktop.value.color) {
+            if (data.desktop.value.color && !data.desktop.value.hasOwnProperty('style')) {
               el.style.color = data.desktop.value.color;
               const paragraphs = el.querySelectorAll('p');
               paragraphs.forEach(p => {

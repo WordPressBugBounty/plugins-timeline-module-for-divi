@@ -53,7 +53,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
         {/* ❗ migration css styling for old module ❗ */}
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let raw = props?.attrs?.unknownAttributes?.heading_custom_padding;
             let parts = raw ? raw.split('|') : [];
@@ -68,7 +68,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let raw = props?.attrs?.unknownAttributes?.description_custom_padding;
             let parts = raw ? raw.split('|') : [];
@@ -83,7 +83,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let raw = props?.attrs?.unknownAttributes?.story_padding;
             let parts = raw ? raw.split('|') : [];
@@ -98,7 +98,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let raw = props?.attrs?.unknownAttributes?.border_radii_story_settings;
             // Expected format: "off|top|right|bottom|left"
@@ -114,7 +114,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.year_label_box_size ?? '80px';
             return `--tw-ybx-size:${data}`;
@@ -123,7 +123,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-story`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.story_spacing_top;
             return `margin-top:${data}`;
@@ -132,7 +132,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-story`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.story_spacing_bottom;
             return `margin-bottom:${data}`;
@@ -141,7 +141,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-vertical`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.labels_position ?? '0';
             return `--tw-ibx-position:${data}`;
@@ -150,7 +150,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.labels_spacing_bottom;
             return `--tw-lbl-gap:${data}`;
@@ -159,7 +159,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.background_main;
             return `--tw-tw-main-bc:${data}`;
@@ -168,7 +168,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-title`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.heading_font_color;
             return `color:${data}`;
@@ -177,7 +177,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
         
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-title`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.heading_background_color;
             return `background-color:${data}`;
@@ -186,7 +186,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.description_font_color ?? '#000000';
             return `--tw-cbx-des-color:${data}`;
@@ -195,7 +195,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.description_background_color;
             return `--tw-cbx-des-background:${data}`;
@@ -204,7 +204,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.label_font_color ?? '#222';
             return `--tw-lbl-big-color:${data}`;
@@ -213,7 +213,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.sub_label_font_color ?? '#222';
             return `--tw-lbl-small-color:${data}`;
@@ -222,7 +222,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.year_label_font_color ?? '#ffffff';
             return `--tw-ybx-text-color:${data}`;
@@ -231,7 +231,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.year_label_bg_color ?? '#54595f';
             return `--tw-ybx-bg:${data}`;
@@ -240,7 +240,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.label_font_size ?? '24px';
             return `--tw-lbl-big-size:${data}`;
@@ -249,7 +249,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.sub_label_font_size ?? '16px';
             return `--tw-lbl-small-size:${data}`;
@@ -258,7 +258,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.year_label_font_size ?? '24px';
             return `--tw-ybx-text-size:${data}`;
@@ -267,7 +267,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
   
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.timeline_line_width ?? '4px';
             return `--tw-line-width:${data}`;
@@ -276,7 +276,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.heading_text_size ?? '24px';
             return `--tw-cbx-title-font-size:${data}`;
@@ -285,17 +285,16 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.heading_text_align;
-            console.log(data)
             return `--tw-cbx-text-align:${data}`;
           }}
         />
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-title`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.heading_line_height;
             return `line-height:${data}`;
@@ -304,7 +303,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.description_text_size ?? '20px';
             return `--tw-cbx-des-text-size:${data}`;
@@ -313,7 +312,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.description_text_align;
             return `--tw-cbx-des-text-align:${data}`;
@@ -322,7 +321,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-description`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.description_line_height;
             return `line-height:${data}`;
@@ -331,7 +330,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let data = props?.attrs?.unknownAttributes?.label_font ?? '';
@@ -351,7 +350,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let data = props?.attrs?.unknownAttributes?.sub_label_font ?? '';
@@ -371,7 +370,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let data = props?.attrs?.unknownAttributes?.year_label_font ?? '';
@@ -391,7 +390,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-title`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let data = props?.attrs?.unknownAttributes?.heading_settings_font ?? '';
@@ -412,7 +411,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content .tmdivi-description`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let data = props?.attrs?.unknownAttributes?.description_settings_font ?? '';
@@ -432,7 +431,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-content`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let border_style_all = props?.attrs?.unknownAttributes?.border_style_all_story_settings;
@@ -450,7 +449,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
         {/* right story arrow */}
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-story-right .tmdivi-arrow`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let border_style_all = props?.attrs?.unknownAttributes?.border_style_all_story_settings;
@@ -469,7 +468,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
         {/* left story arrow */}
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper .tmdivi-story-left .tmdivi-arrow`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let border_style_all = props?.attrs?.unknownAttributes?.border_style_all_story_settings;
@@ -486,7 +485,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper.tmdivi-vertical-right .tmdivi-arrow`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let border_style_all = props?.attrs?.unknownAttributes?.border_style_all_story_settings;
@@ -504,7 +503,7 @@ const MigrationStyles = ({ orderClass, attrs, props }) => {
 
         <CommonStyle
           selector={`${orderClass} .tmdivi-wrapper.tmdivi-vertical-left .tmdivi-arrow`}
-          attr={attrs?.story_background_color?.advanced}
+          attr={attrs?.story_background_color?.advanced ?? attrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let css = ``;
             let border_style_all = props?.attrs?.unknownAttributes?.border_style_all_story_settings;

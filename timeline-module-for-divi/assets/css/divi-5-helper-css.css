@@ -1,3 +1,6 @@
+.tmdivi-wrapper{
+    --tw-cbx-bgc: #ffffff;
+}
 button[value="tmdivi/timeline"]{
     position: relative;
 }
@@ -18,4 +21,7 @@ button[value="tmdivi/timeline"] .et-vb-icon--divi-module-menu::after{
 .tmdivi-icon .et-tmdivi-icon-fa{
     font-family:fontawesome;
     font-style: normal;
+}
+.tmdivi-wrapper .tmdivi-story .tmdivi-arrow{
+    background-color: var(--tw-cbx-bgc);
 }

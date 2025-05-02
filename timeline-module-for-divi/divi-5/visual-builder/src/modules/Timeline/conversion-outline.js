@@ -48,7 +48,7 @@ export const conversionOutline = {
     content:      'css.*.content',
   },
   module: {
-    timeline_layout: 'timeline_layout.advanced.layout.*',
+    timeline_layout: 'timeline_layout.advanced.layout.*.timeline_layout',
     icon_color: 'icon_color.advanced.*',
     icon_background_color: 'icon_background_color.advanced.*',
     timeline_color: 'timeline_color.advanced.*',

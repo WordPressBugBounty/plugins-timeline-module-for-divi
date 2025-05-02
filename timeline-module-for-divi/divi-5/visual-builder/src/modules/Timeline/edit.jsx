@@ -14,7 +14,7 @@ export const TimelineEdit = (props) => {
     childrenIds
   } = props;
 
-  const timelineLayout = props?.attrs?.timeline_layout?.advanced?.layout?.desktop?.value || 'both-side'
+  const timelineLayout = props?.attrs?.timeline_layout?.advanced?.layout?.desktop?.value?.timeline_layout || 'both-side'
 
   let timelineLayoutClass;
   switch(timelineLayout){
@@ -30,7 +30,7 @@ export const TimelineEdit = (props) => {
   default:
       timelineLayoutClass = "both-side";
   }
-  const timeline_fill_setting = 'true'
+  const timeline_fill_setting = props?.attrs?.timeline_fill_setting?.advanced?.desktop?.value
 
   const verticalLayoutClass = `tmdivi-vertical tmdivi-wrapper ${timelineLayoutClass} style-1 tmdivi-bg-simple`;
   
@@ -47,13 +47,13 @@ export const TimelineEdit = (props) => {
         attrName: 'module',
     })}
     
-      <div id="tmdivi-wrapper" className={verticalLayoutClass}>
+      <div id="tmdivi-wrapper" className={verticalLayoutClass} data-line-filling={(timeline_fill_setting === 'on') ? 'true' : 'false'}>
           <div className="tmdivi-start"></div>
           <div className="tmdivi-line tmdivi-timeline">
             {/* Render Timeline Stories */}
             <ChildModulesContainer ids={childrenIds} />
             {/* LineFillEffect with dynamic settings */}
-            <LineFillEffect timeline_fill_setting={timeline_fill_setting} />
+            <LineFillEffect timeline_fill_setting={timeline_fill_setting} props={props} />
           </div>
           <div className="tmdivi-end"></div>
         </div>

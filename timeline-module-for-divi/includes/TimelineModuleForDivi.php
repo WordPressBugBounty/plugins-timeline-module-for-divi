@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class TMDIVI_TimelineModuleForDivi extends DiviExtension {
 
+	
 	/**
 	 * The gettext domain for the extension's translations.
 	 *

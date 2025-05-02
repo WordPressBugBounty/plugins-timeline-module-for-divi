@@ -45,7 +45,7 @@ const TimelineItemStyles = (props) => {
 
       <CommonStyle
           selector={`${orderClass} .tmdivi-story .tmdivi-content div.tmdivi-title`}
-          attr={parentAttrs?.story_background_color?.advanced}
+          attr={parentAttrs?.story_background_color?.advanced ?? parentAttrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.child_story_heading_color;
             return `color:${data}`;
@@ -54,7 +54,7 @@ const TimelineItemStyles = (props) => {
 
       <CommonStyle
           selector={`${orderClass} .tmdivi-story .tmdivi-content .tmdivi-description,${orderClass} .tmdivi-story .tmdivi-content .tmdivi-description p`}
-          attr={parentAttrs?.story_background_color?.advanced}
+          attr={parentAttrs?.story_background_color?.advanced ?? parentAttrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.child_story_description_color;
             return `color:${data}`;
@@ -63,7 +63,7 @@ const TimelineItemStyles = (props) => {
 
       <CommonStyle
           selector={`${orderClass} .tmdivi-story div.tmdivi-content, ${orderClass} .tmdivi-story > div.tmdivi-arrow`}
-          attr={parentAttrs?.story_background_color?.advanced}
+          attr={parentAttrs?.story_background_color?.advanced ?? parentAttrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.child_story_background_color;
             return `background:${data}`;
@@ -72,7 +72,7 @@ const TimelineItemStyles = (props) => {
 
       <CommonStyle
           selector={`${orderClass} .tmdivi-story div.tmdivi-label-big`}
-          attr={parentAttrs?.story_background_color?.advanced}
+          attr={parentAttrs?.story_background_color?.advanced ?? parentAttrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.child_story_label_color;
             return `color:${data}`;
@@ -81,7 +81,7 @@ const TimelineItemStyles = (props) => {
 
       <CommonStyle
           selector={`${orderClass} .tmdivi-story div.tmdivi-label-small`}
-          attr={parentAttrs?.story_background_color?.advanced}
+          attr={parentAttrs?.story_background_color?.advanced ?? parentAttrs?.timeline_layout?.advanced?.layout}
           declarationFunction={(attrs) => {
             let data = props?.attrs?.unknownAttributes?.child_story_sub_label_color;
             return `color:${data}`;

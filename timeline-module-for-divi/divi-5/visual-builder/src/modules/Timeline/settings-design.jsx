@@ -32,10 +32,12 @@ export const TimelineSettingsDesign = (props) => {
 
         <FieldContainer
           attrName="timeline_layout.advanced.layout"
+          subName="timeline_layout"
           label={__('Timeline Layout', 'timeline-module-for-divi')}
           features={{
             sticky: false,
           }}
+          defaultValue={'both-side'}
         >
           <SelectContainer options={{
               "both-side": {
@@ -174,30 +176,6 @@ export const TimelineSettingsDesign = (props) => {
 
           <ColorPickerContainer />  
       </FieldContainer> 
-      
-      {/* <FieldContainer
-            attrName="story_connector_style.advanced"
-            label={__('Story Connector Style', 'timeline-module-for-divi')}
-            features={{
-              sticky: false,
-            }}
-          >
-
-        <SelectContainer options={{
-              "arrow": {
-                label: __('Arrow', 'timeline-module-for-divi'),
-                value:'arrow',
-              },
-              "line": {
-                label: __('Line', 'timeline-module-for-divi'),
-                value:'line',
-              },
-              "none": {
-                label: __('None', 'timeline-module-for-divi'),
-                value:'none',
-              }
-          }} />  
-      </FieldContainer>  */}
 
       <FieldContainer
             attrName="story_padding.advanced"
@@ -386,6 +364,16 @@ export const TimelineSettingsDesign = (props) => {
       <FieldContainer
             attrName="story_spacing_bottom.advanced"
             label={__('Spacing Bottom', 'timeline-module-for-divi')}
+            features={{
+              sticky: false,
+            }}
+          >
+          <RangeContainer />  
+      </FieldContainer> 
+      
+      <FieldContainer
+            attrName="year_label_box_size.advanced"
+            label={__('Year Label Box Size', 'timeline-module-for-divi')}
             features={{
               sticky: false,
             }}
