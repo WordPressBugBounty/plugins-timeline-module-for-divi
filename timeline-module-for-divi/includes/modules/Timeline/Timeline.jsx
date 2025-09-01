@@ -8,7 +8,7 @@ class TMDIVI_Timeline extends React.Component {
     render() {
 
         return (
-            <Timeline timeline_fill_setting={this.props.timeline_fill_setting} timeline_layout={this.props.timeline_layout}>
+            <Timeline timeline_fill_setting={this.props.timeline_fill_setting} timeline_layout={this.props.timeline_layout} timeline_props={this.props}>
                 {this.props.content}
             </Timeline>
         );
@@ -618,7 +618,11 @@ class TMDIVI_Timeline extends React.Component {
 /**
  * @returns ReactJS Custom component for timeline
  */
-function Timeline({children ,timeline_fill_setting, timeline_layout}) {
+function Timeline({children ,timeline_fill_setting, timeline_layout,timeline_props}) {
+
+    const className = timeline_props.moduleInfo.orderClassName;
+    const instanceNum = className.split("_").pop(); 
+    const wrapperId = `tmdivi-wrapper-${instanceNum}`;    
 
     let timelineLayout;
     switch(timeline_layout){
@@ -636,7 +640,7 @@ function Timeline({children ,timeline_fill_setting, timeline_layout}) {
         verticalLayout.setAttribute(`data-layout`,timelineLayout)
     }
     return (
-        <div id="tmdivi-wrapper" className={`tmdivi-vertical tmdivi-wrapper ${timelineLayout} style-1 tmdivi-bg-simple`}>
+        <div id={wrapperId} className={`tmdivi-vertical tmdivi-wrapper ${timelineLayout} style-1 tmdivi-bg-simple`}>
             <div className="tmdivi-start"></div>
             <div className="tmdivi-line tmdivi-timeline">
                 <TimelineStories> {children} </TimelineStories>

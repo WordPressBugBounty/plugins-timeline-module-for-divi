@@ -517,6 +517,9 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
         $timeline_layout = sanitize_text_field($props['timeline_layout']);
         $timeline_fill_setting = sanitize_text_field($props['timeline_fill_setting']);
 
+        $instanceNum = self::$timeline_order - 2;
+        $wrapper_id = "tmdivi-wrapper-$instanceNum";    
+
     switch($timeline_layout){
         case "one-side-left":
             $timelineLayout = "tmdivi-vertical-right";
@@ -529,7 +532,7 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
     }
         // Render module content
         $output = sprintf(
-            ' <div id="tmdivi-wrapper" class="tmdivi-vertical tmdivi-wrapper %3$s style-1 tmdivi-bg-simple" data-line-filling="%2$s">
+            ' <div id="%4$s" class="tmdivi-vertical tmdivi-wrapper %3$s style-1 tmdivi-bg-simple" data-line-filling="%2$s">
             <div class="tmdivi-start"></div>
             <div class="tmdivi-line tmdivi-timeline"> %1$s
             <div class="tmdivi-inner-line" style="height:0px" data-line-fill="%2$s"></div>
@@ -538,7 +541,8 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
             </div>',
             et_core_sanitized_previously($this->content),
             ($timeline_fill_setting === "on")? 'true':'false',
-            esc_attr($timelineLayout)
+            esc_attr($timelineLayout),
+            $wrapper_id
         );
 
         if($props['content'] !== ""){

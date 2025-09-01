@@ -3,9 +3,9 @@ Contributors:coolplugins,narinder-singh,satindersingh
 Donate link: https://paypal.me/CoolPlugins/10USD/
 Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.8.2
 Requires PHP: 7.2
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,40 +13,33 @@ Highlight your company's history, milestones, and future plans with the advanced
 
 == Description ==
 
-**Timeline Module for Divi** is an easy-to-use plugin that helps you create beautiful timelines on your Divi website. Whether you want to show your  **company’s history**, important **milestones**, or **tell a story**, this plugin makes it simple and attractive.
-
-**[View Free Demos](https://cooltimeline.com/divi/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=top_view_demo)**  | **[Buy Pro](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=79863&url=84937)**  |   **[Read More](https://coolplugins.net/how-to-add-a-timeline-in-divi/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=blog&utm_content=top_view_readmore)**
+**[Timeline Module for Divi](https://coolplugins.net/product/divi-timeline-module/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=get_pro&utm_content=top_description)** is a powerful plugin that allows you to design and display timelines directly inside the **Divi Builder**. This plugin offers you ready-made timeline modules that you can add, customize, and publish directly inside Divi in just a few clicks.
 
 https://www.youtube.com/watch?v=V9dEoN0PvFI
 
-**Key Features:**
+Whether you want to display your company’s history, highlight important milestones, share your personal journey, or outline a project roadmap, the Timeline Module for Divi makes it simple and visually appealing.
 
-* **Works with Divi Builder:** Easily add timelines to your pages using the Divi Builder.
-* **Multiple Layouts:** Choose between timelines with events on one side or both sides.
-* **Customizable:** Change colors, fonts, and styles to match your website.
-* **Add Media:** Include images, videos, and icons in your timeline events.
-* **Responsive Design:** Your timelines will look good on any device.
-* **Simple to Use:** You don’t need any technical skills to create and customize your timelines.
+**[View Demos](https://cooltimeline.com/divi/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_demos)**  
 
-It works perfectly with the Divi Builder, letting you add timelines to your pages quickly. 
-You can create timelines that are vertical, with events on one side or both sides of the timeline. Plus, you can customize everything to match your website—like colors, fonts, and styles. You can even add images, videos, and icons to your timeline events. 
 
-### Check our other Timeline plugins demos
-<ul>
-<li><strong>Cool Timeline [Free]</strong>- <a href="https://cooltimeline.com/demo/cool-timeline-free/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=ctl_demo&utm_content=view_free_demo" target="_blank">View Demo</a></li>
+### Key Features
 
-<li><strong>Cool Timeline PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/cool-timeline-pro/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=ctl_demo&utm_content=view_pro_demo" target="_blank">View Demo</a></li>
-<li><strong>Timeline Widget For Elementor [Free]</strong>-<a href="https://cooltimeline.com/demo/elementor-timeline/free/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=twae_demo&utm_content=view_free_demo">View Demo</a></li>
-<li><strong>Timeline Widget For Elementor PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/elementor-timeline-widget/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=twae_demo&utm_content=twea_pro_demo">View Demo</a></li>
-<li><strong>Timeline Builder PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/timeline-builder-pro/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=tbp_demo&utm_content=view_demo">View Demo</a></li>
-<li><strong>Timeline Block For Gutenberg [Free]</strong>- <a href="https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=tbg_demo&utm_content=view_free_demo" target="_blank">View Demo</a>
-</li>
-<li><strong>Timeline Block For Gutenberg PRO [PRO]</strong>- <a href="https://cooltimeline.com/demo/timeline-block-pro/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=tbg_demo&utm_content=view_pro_demo" target="_blank">View Demo</a>
+* **Works with Divi Builder:** The plugin adds a timeline module directly into the Divi Builder. You can place it anywhere on your page and customize it.
 
-<li><strong>Events Calendar Modules for Divi [Free]</strong>- <a href="https://wordpress.org/plugins/events-calendar-modules-for-divi/" target="_blank">Check Plugin</a>
+* **Multiple Layout Options:** Choose between a classic timeline with events on one side or an alternating timeline with stories on both sides.
 
-</ul>
+* **Customizable Design Controls:** Adjust colors, fonts, spacing, icons, and backgrounds according to your website’s theme. 
 
+* **Add Multimedia:** Make your timelines more engaging by including images, videos, or icons in timeline events. This feature helps bring your stories to life and makes your content more interactive.
+
+* **Beginner-Friendly:** No coding knowledge is required. The simple drag-and-drop interface makes it easy for anyone to create professional-looking timelines in minutes.
+
+* Responsive and Mobile-Friendly.
+
+### Upgrade to Pro
+Upgrading to the Pro version gives you access to even more powerful features. With Pro, you can create **[horizontal timelines](https://cooltimeline.com/divi/horizontal-layout/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_horizontal_demos)** perfect for roadmaps, step-by-step guides, and product launches. You also get access to advanced customization options and event layout styles.
+
+**[Get Pro!](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=79863&url=84937)**
 
 ### Where can you use the Timeline Module for Divi
 
@@ -82,11 +75,22 @@ You can create timelines that are vertical, with events on one side or both side
 
 
 It is a **[Divi Theme](https://www.elegantthemes.com/gallery/divi/)** Addon. In order to use this Timeline Module you must have to install **[Divi Theme](https://www.elegantthemes.com/gallery/divi/)**.
+
+### Check our other Timeline plugins
+
+* **Cool Timeline**: Display your company’s history, product roadmaps, personal stories, or key events using the built-in block or via simple shortcode. **[View Demo](https://cooltimeline.com/demo/cool-timeline-free/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=ctl_free_demo)**
+
+* **Timeline Widget For Elementor**: Showcase your company history, product roadmap, and personal journey in vertical & horizontal layout directly inside Elementor. **[View Demo](https://cooltimeline.com/demo/elementor-timeline/free/?utm_source=tmdivi_pluginutm_medium=readme&utm_campaign=demo&utm_content=twea_free_demo)**
+
+* **Timeline Block For Gutenberg**: Create interactive timelines directly within the WordPress Block Editor to display step-by-step tutorials, a company’s history, and a product roadmap. **[View Demo](https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_free_demo)**
+
+* **Timeline Builder**: Create a small timeline inside the Gutenberg block editor using a vertical or horizontal timeline. **[View Demo](https://cooltimeline.com/demo/timeline-builder-pro/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbp_view_demo)**
+
 == Installation ==
 
 #### 1. Install The Dependencies 
 
-Before getting started, ensure you have the **Divi Theme** by Elegant Themes installed and activated. This is essential, as our product is fully integrated with Divi.
+* Before getting started, ensure you have the **Divi Theme** by Elegant Themes installed and activated. This is essential, as our product is fully integrated with Divi.
 
 #### 2. Upload the Plugin:
 
@@ -179,6 +183,10 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog == 
 
+= Version 1.1.3 | 01 Sep 2025 =  
+- Optimization:- Bug fixes and security code improvements.
+- Updated :- UTM Links.
+
 = Version 1.1.2 | 01 May 2025 =  
 - Fixed: Multiple bugs in the Visual Builder for both Divi 4 and Divi 5.   
 - Improved: Migration process from Divi 4 to Divi 5 and design for better UI/UX.
@@ -206,4 +214,15 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 - Initial release with vertical timeline functionality.  
 - Customization options for colors, fonts, and styles.  
 - Fully responsive design for all devices.  
+
+== ⚠️Important Notice ==
+Migration from Divi 4 to Divi 5 will only be supported till Divi 5 Public Alpha 14. If you are planning to upgrade your site or plugins, please make sure to complete the migration process before Alpha 14. After this point, direct migration from Divi 4 will no longer be available, and this may lead to compatibility issues.
+
+== Upgrade Notice ==
+
+= Version 1.1.0 | 27 Mar 2025 =  
+- Added: Compatibility with Divi 5.  
+- Fixed: Minor bugs for improved stability.  
+- Improved: Design tweaks for better UI/UX.  
+
 

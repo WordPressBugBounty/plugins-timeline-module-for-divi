@@ -1099,12 +1099,13 @@ trait ModuleStylesTrait {
 					CommonStyle::style(
 						[
 							'selector'            => $order_class . ' .tmdivi-wrapper',
-							'attr'                => $attrs['story_title']['decoration']['font'] ?? '',
+							// 'attr'                => $attrs['story_title']['decoration']['font'] ?? '',
+							'attr'                => $attrs['story_title']['decoration']['font']['font'] ?? '',
 							'declarationFunction' => function ($declaration_function_args) {
 								$data = $declaration_function_args['attrValue'] ?? '';
 								$css = '';
-								if(!empty($data['value']['textAlign'])){
-									$title_align_ment = $data['value']['textAlign'];
+								if(!empty($data['textAlign'])){
+									$title_align_ment = $data['textAlign'];
 									$css = "--tw-cbx-text-align: {$title_align_ment};";
 								}
 								return $css;

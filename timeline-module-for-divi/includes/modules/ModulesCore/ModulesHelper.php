@@ -102,7 +102,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-line-bg: %1$s;', $timeline_color),
+                    'declaration' => sprintf('--tw-line-bg: %1$s;', esc_attr($timeline_color)),
                 ]
             );
         }
@@ -112,7 +112,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-line-filling-color: %1$s;', $timeline_fill_color),
+                    'declaration' => sprintf('--tw-line-filling-color: %1$s;', esc_attr($timeline_fill_color)),
                 ]
             );
         }
@@ -122,7 +122,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ibx-bg: %1$s;', $icon_bg_color),
+                    'declaration' => sprintf('--tw-ibx-bg: %1$s;', esc_attr($icon_bg_color)),
                 ]
             );
         }
@@ -132,7 +132,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ibx-color: %1$s;', $icon_color),
+                    'declaration' => sprintf('--tw-ibx-color: %1$s;', esc_attr($icon_color)),
                 ]
             );
         }
@@ -161,49 +161,49 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-font: %1$s;', $Font_properties['fontFamily']),
+                    'declaration' => sprintf('--tw-lbl-big-font: %1$s;', esc_attr($Font_properties['fontFamily'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-weight: %1$s;', $Font_properties['fontWeight']),
+                    'declaration' => sprintf('--tw-lbl-big-weight: %1$s;', esc_attr($Font_properties['fontWeight'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-text-transform: %1$s;', $Font_properties['textTransform']),
+                    'declaration' => sprintf('--tw-lbl-big-text-transform: %1$s;', esc_attr($Font_properties['textTransform'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-text-decoration: %1$s;', $Font_properties['textDecoration']),
+                    'declaration' => sprintf('--tw-lbl-big-text-decoration: %1$s;', esc_attr($Font_properties['textDecoration'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-style: %1$s;', $Font_properties['fontStyle']),
+                    'declaration' => sprintf('--tw-lbl-big-style: %1$s;', esc_attr($Font_properties['fontStyle'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-text-decoration-color: %1$s;', $Font_properties['textDecorationLineColor']),
+                    'declaration' => sprintf('--tw-lbl-big-text-decoration-color: %1$s;', esc_attr($Font_properties['textDecorationLineColor'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-text-decoration-style: %1$s;', $Font_properties['textDecorationStyle']),
+                    'declaration' => sprintf('--tw-lbl-big-text-decoration-style: %1$s;', esc_attr($Font_properties['textDecorationStyle'])),
                 ]
             );
         }
@@ -212,7 +212,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-size: %1$s;', $label_fsize),
+                    'declaration' => sprintf('--tw-lbl-big-size: %1$s;', esc_attr($label_fsize)),
                 ]
             );
         }
@@ -222,7 +222,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-big-color: %1$s;', $label_fcolor),
+                    'declaration' => sprintf('--tw-lbl-big-color: %1$s;', esc_attr($label_fcolor)),
                 ]
             );
         }
@@ -235,49 +235,49 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-font: %1$s;', $Font_properties['fontFamily']),
+                    'declaration' => sprintf('--tw-lbl-small-font: %1$s;', esc_attr($Font_properties['fontFamily'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-weight: %1$s;', $Font_properties['fontWeight']),
+                    'declaration' => sprintf('--tw-lbl-small-weight: %1$s;', esc_attr($Font_properties['fontWeight'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-text-transform: %1$s;', $Font_properties['textTransform']),
+                    'declaration' => sprintf('--tw-lbl-small-text-transform: %1$s;', esc_attr($Font_properties['textTransform'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-text-decoration: %1$s;', $Font_properties['textDecoration']),
+                    'declaration' => sprintf('--tw-lbl-small-text-decoration: %1$s;', esc_attr($Font_properties['textDecoration'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-style: %1$s;', $Font_properties['fontStyle']),
+                    'declaration' => sprintf('--tw-lbl-small-style: %1$s;', esc_attr($Font_properties['fontStyle'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-text-decoration-color: %1$s;', $Font_properties['textDecorationLineColor']),
+                    'declaration' => sprintf('--tw-lbl-small-text-decoration-color: %1$s;', esc_attr($Font_properties['textDecorationLineColor'])),
                 ]
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-text-decoration-style: %1$s;', $Font_properties['textDecorationStyle']),
+                    'declaration' => sprintf('--tw-lbl-small-text-decoration-style: %1$s;', esc_attr($Font_properties['textDecorationStyle'])),
                 ]
             );
         }
@@ -287,7 +287,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-size: %1$s;', $sub_label_fsize),
+                    'declaration' => sprintf('--tw-lbl-small-size: %1$s;', esc_attr($sub_label_fsize)),
                 ]
             );
         }
@@ -297,7 +297,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-lbl-small-color: %1$s;', $sub_label_fcolor),
+                    'declaration' => sprintf('--tw-lbl-small-color: %1$s;', esc_attr($sub_label_fcolor)),
                 ]
             );
         }
@@ -311,7 +311,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-font: %1$s;', $Font_properties['fontFamily']),
+                    'declaration' => sprintf('--tw-ybx-font: %1$s;', esc_attr($Font_properties['fontFamily'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -319,7 +319,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-weight: %1$s;', $Font_properties['fontWeight']),
+                    'declaration' => sprintf('--tw-ybx-text-weight: %1$s;', esc_attr($Font_properties['fontWeight'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -327,7 +327,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-text-transform: %1$s;', $Font_properties['textTransform']),
+                    'declaration' => sprintf('--tw-ybx-text-text-transform: %1$s;', esc_attr($Font_properties['textTransform'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -335,7 +335,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-text-decoration: %1$s;', $Font_properties['textDecoration']),
+                    'declaration' => sprintf('--tw-ybx-text-text-decoration: %1$s;', esc_attr($Font_properties['textDecoration'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -343,7 +343,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-style: %1$s;', $Font_properties['fontStyle']),
+                    'declaration' => sprintf('--tw-ybx-text-style: %1$s;', esc_attr($Font_properties['fontStyle'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -351,7 +351,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-text-decoration-color: %1$s;', $Font_properties['textDecorationLineColor']),
+                    'declaration' => sprintf('--tw-ybx-text-text-decoration-color: %1$s;', esc_attr($Font_properties['textDecorationLineColor'])),
                 ]
             );
             ET_Builder_Element::set_style(
@@ -359,7 +359,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-text-decoration-style: %1$s;', $Font_properties['textDecorationStyle']),
+                    'declaration' => sprintf('--tw-ybx-text-text-decoration-style: %1$s;', esc_attr($Font_properties['textDecorationStyle'])),
                 ]
             );
         }
@@ -370,7 +370,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-color: %1$s;', $year_label_color),
+                    'declaration' => sprintf('--tw-ybx-text-color: %1$s;', esc_attr($year_label_color)),
                 ]
             );
         }
@@ -381,7 +381,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-size: %1$s;', $year_label_boxsize),
+                    'declaration' => sprintf('--tw-ybx-size: %1$s;', esc_attr($year_label_boxsize)),
                 ]
             );
         } 
@@ -393,7 +393,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-text-size: %1$s;', $year_label_font_size),
+                    'declaration' => sprintf('--tw-ybx-text-size: %1$s;', esc_attr($year_label_font_size)),
                 ]
             );
         } 
@@ -404,7 +404,7 @@ class TMDIVI_ModulesHelper{
                 [
                     // 'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-year-text",
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-ybx-bg: %1$s;', $year_label_bgcolor),
+                    'declaration' => sprintf('--tw-ybx-bg: %1$s;', esc_attr($year_label_bgcolor)),
                 ]
             );
         }
@@ -414,10 +414,10 @@ class TMDIVI_ModulesHelper{
 
             $padding_part = explode('|', $story_padding);
 
-            $padding_top = ($padding_part[0] !== "") ? $padding_part[0] : "0.75em";
-            $padding_right = ($padding_part[1] !== "") ? $padding_part[1] : "0.75em";
-            $padding_bottom = ($padding_part[2] !== "") ? $padding_part[2] : "2px";
-            $padding_left = ($padding_part[3] !== "") ? $padding_part[3] : "0.75em";
+            $padding_top = ($padding_part[0] !== "") ? esc_attr($padding_part[0]) : "0.75em";
+            $padding_right = ($padding_part[1] !== "") ? esc_attr($padding_part[1]) : "0.75em";
+            $padding_bottom = ($padding_part[2] !== "") ? esc_attr($padding_part[2]) : "2px";
+            $padding_left = ($padding_part[3] !== "") ? esc_attr($padding_part[3]) : "0.75em";
 
             ET_Builder_Element::set_style(
                 $render_slug,
@@ -433,21 +433,21 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-bgc: %1$s;', $story_background_color),
+                    'declaration' => sprintf('--tw-cbx-bgc: %1$s;', esc_attr($story_background_color)),
                 ],
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-arrow",
-                    'declaration' => sprintf('background: %1$s;', $story_background_color),
+                    'declaration' => sprintf('background: %1$s;', esc_attr($story_background_color)),
                 ],
             );
             ET_Builder_Element::set_style(
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-arrow",
-                    'declaration' => sprintf('background: %1$s;', $story_background_color),
+                    'declaration' => sprintf('background: %1$s;', esc_attr($story_background_color)),
                 ],
             );
         }
@@ -456,7 +456,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-title-font-size: %1$s;', $heading_text_size),
+                    'declaration' => sprintf('--tw-cbx-title-font-size: %1$s;', esc_attr($heading_text_size)),
                 ],
             );
         }
@@ -465,7 +465,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-title",
-                    'declaration' => sprintf('line-height: %1$s;', $heading_line_height),
+                    'declaration' => sprintf('line-height: %1$s;', esc_attr($heading_line_height)),
                 ],
             );
         }
@@ -474,7 +474,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-title-color: %1$s;', $heading_font_color),
+                    'declaration' => sprintf('--tw-cbx-title-color: %1$s;', esc_attr($heading_font_color)),
                 ],
             );
         }
@@ -483,7 +483,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-title-background-color: %1$s;', $heading_background_color),
+                    'declaration' => sprintf('--tw-cbx-title-background-color: %1$s;', esc_attr($heading_background_color)),
                 ],
             );
         }
@@ -492,7 +492,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-text-align: %1$s;', $heading_text_align),
+                    'declaration' => sprintf('--tw-cbx-text-align: %1$s;', esc_attr($heading_text_align)),
                 ],
             );
         }
@@ -501,10 +501,10 @@ class TMDIVI_ModulesHelper{
 
             $padding_part = explode('|', $heading_custom_padding);
 
-            $padding_top = ($padding_part[0] !== "") ? $padding_part[0] : "5px";
-            $padding_right = ($padding_part[1] !== "") ? $padding_part[1] : "5px";
-            $padding_bottom = ($padding_part[2] !== "") ? $padding_part[2] : "5px";
-            $padding_left = ($padding_part[3] !== "") ? $padding_part[3] : "5px";
+            $padding_top = ($padding_part[0] !== "") ? esc_attr($padding_part[0]) : "5px";
+            $padding_right = ($padding_part[1] !== "") ? esc_attr($padding_part[1]) : "5px";
+            $padding_bottom = ($padding_part[2] !== "") ? esc_attr($padding_part[2]) : "5px";
+            $padding_left = ($padding_part[3] !== "") ? esc_attr($padding_part[3]) : "5px";
 
             ET_Builder_Element::set_style(
                 $render_slug,
@@ -523,7 +523,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-title-font-weight: %1$s;',$font_weight),
+                    'declaration' => sprintf('--tw-cbx-title-font-weight: %1$s;',esc_attr($font_weight)),
                 ],
             );
         }
@@ -534,7 +534,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-des-text-size: %1$s;', $description_text_size),
+                    'declaration' => sprintf('--tw-cbx-des-text-size: %1$s;', esc_attr($description_text_size)),
                 ],
             );
         }
@@ -544,7 +544,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-description",
-                    'declaration' => sprintf('line-height: %1$s;', $description_line_height),
+                    'declaration' => sprintf('line-height: %1$s;', esc_attr($description_line_height)),
                 ],
             );
         }
@@ -554,7 +554,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-des-color: %1$s;', $description_font_color),
+                    'declaration' => sprintf('--tw-cbx-des-color: %1$s;', esc_attr($description_font_color)),
                 ],
             );
         }
@@ -564,7 +564,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-des-background: %1$s;', $description_background_color),
+                    'declaration' => sprintf('--tw-cbx-des-background: %1$s;', esc_attr($description_background_color)),
                 ],
             );
         }
@@ -574,7 +574,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-cbx-des-text-align: %1$s;', $description_text_align),
+                    'declaration' => sprintf('--tw-cbx-des-text-align: %1$s;', esc_attr($description_text_align)),
                 ],
             );
         }
@@ -583,10 +583,10 @@ class TMDIVI_ModulesHelper{
             
             $padding_part = explode('|', $description_custom_padding);
 
-            $padding_top = ($padding_part[0] !== "") ? $padding_part[0] : "5px";
-            $padding_right = ($padding_part[1] !== "") ? $padding_part[1] : "0px";
-            $padding_bottom = ($padding_part[2] !== "") ? $padding_part[2] : "0px";
-            $padding_left = ($padding_part[3] !== "") ? $padding_part[3] : "0px";
+            $padding_top = ($padding_part[0] !== "") ? esc_attr($padding_part[0]) : "5px";
+            $padding_right = ($padding_part[1] !== "") ? esc_attr($padding_part[1]) : "0px";
+            $padding_bottom = ($padding_part[2] !== "") ? esc_attr($padding_part[2]) : "0px";
+            $padding_left = ($padding_part[3] !== "") ? esc_attr($padding_part[3]) : "0px";
 
             ET_Builder_Element::set_style(
                 $render_slug,
@@ -602,7 +602,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-vertical",
-                    'declaration' => sprintf('--tw-ibx-position: %1$s;', str_replace("px", "", $labels_position)),
+                    'declaration' => sprintf('--tw-ibx-position: %1$s;', str_replace("px", "", esc_attr($labels_position))),
                 ],
             );
         }
@@ -612,7 +612,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-labels",
-                    'declaration' => sprintf('gap: %1$s;',  $labels_spacing_bottom),
+                    'declaration' => sprintf('gap: %1$s;',  esc_attr($labels_spacing_bottom)),
                 ],
             );
         }
@@ -622,7 +622,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-story",
-                    'declaration' => sprintf('margin-top: %1$s;',  $story_spacing_top),
+                    'declaration' => sprintf('margin-top: %1$s;',  esc_attr($story_spacing_top)),
                 ],
             );
         }
@@ -632,7 +632,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-story",
-                    'declaration' => sprintf('margin-bottom: %1$s;',  $story_spacing_bottom),
+                    'declaration' => sprintf('margin-bottom: %1$s;',  esc_attr($story_spacing_bottom)),
                 ],
             );
         }
@@ -642,13 +642,13 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-tw-main-bc: %1$s;',  $background_main),
+                    'declaration' => sprintf('--tw-tw-main-bc: %1$s;',  esc_attr($background_main)),
                 ],
             );
         }
 
         if (!empty($props['border_style_all_story_settings'])) {
-            $border_style_all = $props['border_style_all_story_settings'];
+            $border_style_all = esc_attr($props['border_style_all_story_settings']);
         
             $screen_width_condition = '@media (min-width: 768px)';
             $border_color_declaration = sprintf('border-style: %1$s %2$s hidden hidden;', $border_style_all, $border_style_all);
@@ -711,7 +711,7 @@ class TMDIVI_ModulesHelper{
                     $render_slug,
                     [
                         'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-story .tmdivi-arrow",
-                        'declaration' => sprintf('border-width: %1$s;',$props['border_width_all_story_settings']),
+                        'declaration' => sprintf('border-width: %1$s;',esc_attr($props['border_width_all_story_settings'])),
                     ]
                 );
 
@@ -719,14 +719,14 @@ class TMDIVI_ModulesHelper{
                     $render_slug,
                     [
                         'selector' => "%%order_class%% .tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-arrow",
-                        'declaration' => sprintf('border-width: %1$s;',$props['border_width_all_story_settings']),
+                        'declaration' => sprintf('border-width: %1$s;',esc_attr($props['border_width_all_story_settings'])),
                     ]
                 );
             }
         }
 
         if ($props['border_color_all_story_settings'] != '') { 
-            $border_color_all = $props['border_color_all_story_settings'];
+            $border_color_all = esc_attr($props['border_color_all_story_settings']);
 
             $screen_width_condition = '@media (min-width: 768px)';
             $border_color_declaration = sprintf('border-color: %1$s %2$s transparent transparent;',  $border_color_all, $border_color_all);
@@ -763,7 +763,7 @@ class TMDIVI_ModulesHelper{
                 $render_slug,
                 [
                     'selector' => "%%order_class%% .tmdivi-wrapper",
-                    'declaration' => sprintf('--tw-line-width : %1$s;', $timeline_line_width),
+                    'declaration' => sprintf('--tw-line-width : %1$s;', esc_attr($timeline_line_width)),
                 ],
             );
         }
@@ -772,11 +772,11 @@ class TMDIVI_ModulesHelper{
 
     public static function ChildStaticCssLoader($props, $render_slug){
 
-        $child_story_background_color = $props['child_story_background_color'];
-        $child_story_heading_color = $props['child_story_heading_color'];
-        $child_story_description_color = $props['child_story_description_color'];
-        $child_story_label_color = $props['child_story_label_color'];
-        $child_story_sub_label_color = $props['child_story_sub_label_color'];
+        $child_story_background_color = esc_attr($props['child_story_background_color']);
+        $child_story_heading_color = esc_attr($props['child_story_heading_color']);
+        $child_story_description_color = esc_attr($props['child_story_description_color']);
+        $child_story_label_color = esc_attr($props['child_story_label_color']);
+        $child_story_sub_label_color = esc_attr($props['child_story_sub_label_color']);
 
 
 

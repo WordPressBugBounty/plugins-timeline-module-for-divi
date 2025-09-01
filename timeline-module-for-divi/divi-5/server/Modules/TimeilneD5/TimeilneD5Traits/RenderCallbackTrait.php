@@ -20,6 +20,9 @@ trait RenderCallbackTrait {
 			$block->parsed_block['innerBlocks']
 		) : [];	
 
+		$instanceNum = $block->parsed_block['orderIndex'];
+        $wrapper_id = "tmdivi-wrapper-$instanceNum";
+
 		$timeline_layout = $attrs['timeline_layout']['advanced']['layout']['desktop']['value']['timeline_layout'] ?? 'both-side';
 
 
@@ -55,7 +58,7 @@ trait RenderCallbackTrait {
 
 		$layout_html .= 
 			sprintf(
-			'<div id="tmdivi-wrapper" class="tmdivi-vertical tmdivi-wrapper %3$s style-1 tmdivi-bg-simple" data-line-filling="%2$s">
+			'<div id="%4$s" class="tmdivi-vertical tmdivi-wrapper %3$s style-1 tmdivi-bg-simple" data-line-filling="%2$s">
 					<div class="tmdivi-start"></div>
 					<div class="tmdivi-line tmdivi-timeline"> %1$s
 						<div class="tmdivi-inner-line" style="height:0px" data-line-fill="%2$s"></div>
@@ -64,7 +67,8 @@ trait RenderCallbackTrait {
 			</div>',
 			$content,
 			($timeline_line_filling === 'on') ? 'true' : 'false',
-			esc_attr($timelineLayoutClass)
+			esc_attr($timelineLayoutClass),
+			$wrapper_id
 		);
 
 

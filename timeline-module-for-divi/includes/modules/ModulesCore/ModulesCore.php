@@ -59,9 +59,9 @@ class TMDIVI_Builder_Module extends ET_Builder_Module{
      *  Credit information for divi module
      */
     protected $module_credits = array(
-        'module_uri' => 'https://coolplugins.net',
+        'module_uri' => 'https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=dashboard',
         'author' => 'Cool Plugins',
-        'author_uri' => 'https://coolplugins.net',
+        'author_uri' => 'https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=dashboard',
     );
 
     public function _enqueue_scripts()

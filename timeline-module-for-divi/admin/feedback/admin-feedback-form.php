@@ -45,8 +45,12 @@ class TMDIVI_feedback {
 	}
 
 	public function tmdivi_dismiss_review_notice(){
-		$rs = update_option( $this->review_option, 'yes' );
-		echo json_encode( array( 'success' => 'true' ) );
+		if ( check_ajax_referer( $this->plugin_slug . '_dismiss_notice_nonce', '_nonce', false ) ){
+			$rs = update_option( $this->review_option, 'yes' );
+			echo json_encode( array( 'success' => 'true' ) );
+		}else {
+			wp_send_json_error( array( 'message' => 'Invalid nonce' ) );
+		}
 		exit;
 	}
 
@@ -73,27 +77,37 @@ class TMDIVI_feedback {
 
 		// check if installation days is greator then week
 		if ( isset( $diff_days ) && $diff_days >= 3 ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 			echo $this->tmdivi_create_notice_content();
 		}
 	}
 
 	function tmdivi_create_notice_content() {
+		$nonce = wp_create_nonce( $this->plugin_slug . '_dismiss_notice_nonce' );
+		$plugin_slug_esc   = esc_attr($this->plugin_slug);
+		$review_link_esc   = esc_url($this->review_link);
+		$plugin_logo_url   = esc_url(trailingslashit($this->plugin_url) . ltrim($this->plugin_logo, '/'));
+		$buy_pro_link   = esc_url($this->buy_link);
+		$plugin_name_esc   = esc_html($this->plugin_name);
+		$ajax_url_esc      = esc_url(admin_url('admin-ajax.php'));
+
+
 		$plugin_buy_button = '';
 		if ( $this->buy_link != '' ) {
-			$plugin_buy_button = '<li><a href="' . $this->buy_link . '" target="_blank" class="buy-pro-btn button button-secondary" title="Buy Pro">Buy Pro</a></li>';
+			$plugin_buy_button = '<li><a href="' . $buy_pro_link . '" target="_blank" class="buy-pro-btn button button-secondary" title="Buy Pro">Buy Pro</a></li>';
 		}
 
 		$html = '
-		<div data-ajax-url="' . admin_url( 'admin-ajax.php' ) . '" data-ajax-callback="' . $this->plugin_slug . '_dismiss_notice" class="' . $this->plugin_slug . '-review-notice-wrapper notice">
+		<div data-ajax-url="' . $ajax_url_esc . '" data-ajax-callback="' . $plugin_slug_esc . '_dismiss_notice" class="' . $plugin_slug_esc . '-review-notice-wrapper notice" data-nonce="'. esc_attr( $nonce ).'">
 			<div class="logo_container">
-				<a href="' . esc_url( $this->review_link ) . '" target="_blank"><img src="' . $this->plugin_url . $this->plugin_logo . '" alt="' . $this->plugin_name . '"></a>
+				<a href="' . $review_link_esc . '" target="_blank"><img src="' . $plugin_logo_url . '" alt="' . $plugin_name_esc . '"></a>
 			</div>
 			<div class="message_container">
-				<p>Thanks for using <b>' . $this->plugin_name . '</b> WordPress plugin. We hope it meets your expectations!<br/>Please give us a quick rating, it works as a boost for us to keep working on more <a href="https://coolplugins.net" target="_blank"><strong>Cool Plugins</strong></a>!</p>
+				<p>Thanks for using <b>' . $plugin_name_esc . '</b> WordPress plugin. We hope it meets your expectations!<br/>Please give us a quick rating, it works as a boost for us to keep working on more <a href="https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=homepage&utm_content=visit_site" target="_blank"><strong>Cool Plugins</strong></a>!</p>
 				<ul>
-					<li><a href="' . esc_url( $this->review_link ) . '" class="rate-it-btn button button-primary" target="_blank" title="Submit A Review...">Rate Now! ★★★★★</a></li>
-					<li><a href="javascript:void(0);" class="already-rated-btn button button-secondary ' . $this->plugin_slug . '_dismiss_notice" title="Already Rated - Close This Notice!">Already Rated</a></li>
-					<li><a href="javascript:void(0);" class="already-rated-btn button button-secondary ' . $this->plugin_slug . '_dismiss_notice" title="Not Interested - Close This Notice!">Not Interested</a></li>
+					<li><a href="' . $review_link_esc . '" class="rate-it-btn button button-primary" target="_blank" title="Submit A Review...">Rate Now! ★★★★★</a></li>
+					<li><a href="javascript:void(0);" class="already-rated-btn button button-secondary ' . $plugin_slug_esc . '_dismiss_notice" title="Already Rated - Close This Notice!">Already Rated</a></li>
+					<li><a href="javascript:void(0);" class="already-rated-btn button button-secondary ' . $plugin_slug_esc . '_dismiss_notice" title="Not Interested - Close This Notice!">Not Interested</a></li>
 					' . $plugin_buy_button . '
 				</ul>
 			</div>
@@ -103,7 +117,7 @@ class TMDIVI_feedback {
 		// css styles
 		$style = '
 		<style>
-		#wpbody .' . $this->plugin_slug . '-review-notice-wrapper.notice {
+		#wpbody .' . $plugin_slug_esc . '-review-notice-wrapper.notice {
 			padding: 5px;
 			margin: 5px 0;
 			display: table;
@@ -113,51 +127,52 @@ class TMDIVI_feedback {
 			box-sizing: border-box;
 			box-shadow: 2px 4px 8px -2px rgba(0, 0, 0, 0.1)
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper .logo_container {
+		.' . $plugin_slug_esc . '-review-notice-wrapper .logo_container {
 			width: 80px;
 			display: table-cell;
 			padding: 5px;
 			vertical-align: middle;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper .logo_container a,
-		.' . $this->plugin_slug . '-review-notice-wrapper .logo_container img {
+		.' . $plugin_slug_esc . '-review-notice-wrapper .logo_container a,
+		.' . $plugin_slug_esc . '-review-notice-wrapper .logo_container img {
 			width:80px;
 			height:auto;
 			display:inline-block;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper .message_container {
+		.' . $plugin_slug_esc . '-review-notice-wrapper .message_container {
 			display: table-cell;
 			padding: 5px;
 			vertical-align: middle;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper p,
-		.' . $this->plugin_slug . '-review-notice-wrapper ul {
+		.' . $plugin_slug_esc . '-review-notice-wrapper p,
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul {
 			padding: 0;
 			margin: 0;
 			line-height: 1.25em;
 			display: flow-root;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul {
 			margin-top: 10px;
+			list-style-type: none;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul li {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul li {
 			float: left;
 			margin: 0px 10px 0 0;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul li .button-primary {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul li .button-primary {
 			background: #772ec9;
 			text-shadow: none;
 			border-color: #a69516;
 			box-shadow: none;
 			color: #fff;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul li .button-secondary {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul li .button-secondary {
 			background: #fff;
 			background-color: #fff;
 			border: 1px solid #757575;
 			color: #757575;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul li .button-secondary.already-rated-btn:after {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul li .button-secondary.already-rated-btn:after {
 			color: #f12945;
 			content: "\f153";
 			display: inline-block;
@@ -167,15 +182,15 @@ class TMDIVI_feedback {
 			line-height: 14px;
 			font-family: dashicons;
 		}
-		.' . $this->plugin_slug . '-review-notice-wrapper ul li .button-primary:hover {
+		.' . $plugin_slug_esc . '-review-notice-wrapper ul li .button-primary:hover {
 			background: #222;
 			border-color: #000;
 		}
 		@media screen and (max-width: 660px) {
-			.' . $this->plugin_slug . '-review-notice-wrapper .logo_container{
+			.' . $plugin_slug_esc . '-review-notice-wrapper .logo_container{
 				display:none;
 			}
-			.' . $this->plugin_slug . '-review-notice-wrapper .message_container {
+			.' . $plugin_slug_esc . '-review-notice-wrapper .message_container {
 				display: flow-root;
 			}
 		}
@@ -186,12 +201,13 @@ class TMDIVI_feedback {
 		$script = '
 		<script>
 		jQuery(document).ready(function ($) {
-			$(".' . $this->plugin_slug . '_dismiss_notice").on("click", function (event) {
+			$(".' . $plugin_slug_esc . '_dismiss_notice").on("click", function (event) {
 				var $this = $(this);
-				var wrapper=$this.parents(".' . $this->plugin_slug . '-review-notice-wrapper");
+				var wrapper=$this.parents(".' . $plugin_slug_esc . '-review-notice-wrapper");
 				var ajaxURL=wrapper.data("ajax-url");
-				var ajaxCallback=wrapper.data("ajax-callback");         
-				$.post(ajaxURL, { "action":ajaxCallback }, function( data ) {
+				var ajaxCallback=wrapper.data("ajax-callback");
+				var nonce = wrapper.data("nonce");         
+				$.post(ajaxURL, { "action":ajaxCallback, _nonce: nonce }, function( data ) {
 					wrapper.slideUp("fast");
 				}, "json");
 			});
@@ -245,7 +261,7 @@ class TMDIVI_feedback {
 
 			<div class="cp-feedback-header">
 				<div class="cp-feedback-title"><?php echo esc_html__( 'Quick Feedback', 'timeline-module-for-divi' ); ?></div>
-				<div class="cp-feedback-title-link">A plugin by <a href="https://coolplugins.net/?utm_source=<?php echo esc_attr( $this->plugin_slug ); ?>_plugin&utm_medium=inside&utm_campaign=coolplugins&utm_content=deactivation_feedback" target="_blank">CoolPlugins.net</a></div>
+				<div class="cp-feedback-title-link">A plugin by <a href="https://coolplugins.net/?utm_source=<?php echo esc_url( $this->plugin_slug ); ?>_plugin&utm_medium=inside&utm_campaign=coolplugins&utm_content=deactivation_feedback" target="_blank">CoolPlugins.net</a></div>
 			</div>
 
 			<div class="cp-feedback-loader">
@@ -290,6 +306,52 @@ class TMDIVI_feedback {
 		<?php
 	}
 
+	function tmdivi_get_user_info(){
+		global $wpdb;
+        // Server and WP environment details
+        $server_info = [
+            'server_software'        => isset($_SERVER['SERVER_SOFTWARE']) ? sanitize_text_field($_SERVER['SERVER_SOFTWARE']) : 'N/A',
+            'mysql_version'          => $wpdb ? sanitize_text_field($wpdb->get_var("SELECT VERSION()")) : 'N/A',
+            'php_version'            => sanitize_text_field(phpversion() ?: 'N/A'),
+            'wp_version'             => sanitize_text_field(get_bloginfo('version') ?: 'N/A'),
+            'wp_debug'               => (defined('WP_DEBUG') && WP_DEBUG) ? 'Enabled' : 'Disabled',
+            'wp_memory_limit'        => sanitize_text_field(ini_get('memory_limit') ?: 'N/A'),
+            'wp_max_upload_size'     => sanitize_text_field(ini_get('upload_max_filesize') ?: 'N/A'),
+            'wp_permalink_structure' => sanitize_text_field(get_option('permalink_structure') ?: 'Default'),
+            'wp_multisite'           => is_multisite() ? 'Enabled' : 'Disabled',
+            'wp_language'            => sanitize_text_field(get_option('WPLANG') ?: get_locale()),
+            'wp_prefix'              => isset($wpdb->prefix) ? sanitize_key($wpdb->prefix) : 'N/A',
+        ];
+        // Theme details
+        $theme = wp_get_theme();
+        $theme_data = [
+            'name'      => sanitize_text_field($theme->get('Name')),
+            'version'   => sanitize_text_field($theme->get('Version')),
+            'theme_uri' => esc_url($theme->get('ThemeURI')),
+        ];
+        // Ensure plugin functions are loaded
+        if ( ! function_exists('get_plugins') ) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+        // Active plugins details
+        $active_plugins = get_option('active_plugins', []);
+        $plugin_data = [];
+        foreach ( $active_plugins as $plugin_path ) {
+            $plugin_info = get_plugin_data(WP_PLUGIN_DIR . '/' . sanitize_text_field($plugin_path));
+            $plugin_data[] = [
+                'name'       => sanitize_text_field($plugin_info['Name']),
+                'version'    => sanitize_text_field($plugin_info['Version']),
+                'plugin_uri' => esc_url($plugin_info['PluginURI']),
+            ];
+        }
+        return [
+            'server_info'   => $server_info,
+            'extra_details' => [
+                'wp_theme'       => $theme_data,
+                'active_plugins' => $plugin_data,
+            ],
+        ];
+	}
 
 	function submit_deactivation_response() {
 		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['_wpnonce'] ), '_cool-plugins_deactivate_feedback_nonce' ) ) {
@@ -319,29 +381,38 @@ class TMDIVI_feedback {
 				),
 			);
 
+			$plugin_initial =  get_option( 'tmdivi_initial_version' );
+
 			$deativation_reason = array_key_exists( $reason, $deactivate_reasons ) ? $reason : 'other';
 
 			$deativation_reason = esc_html($deativation_reason);
 			$sanitized_message = empty( $_POST['message'] ) || sanitize_text_field( $_POST['message'] ) == '' ? 'N/A' : sanitize_text_field( $_POST['message'] );
 			$admin_email       = sanitize_email( get_option( 'admin_email' ) );
 			$site_url          = esc_url( site_url() );
-			$feedback_url      = esc_url( 'http://feedback.coolplugins.net/wp-json/coolplugins-feedback/v1/feedback' );
+			$feedback_url      = esc_url( 'https://feedback.coolplugins.net/wp-json/coolplugins-feedback/v1/feedback' );
+			$install_date 		= get_option('tmdivi-installDate');
+			$unique_key     	= '56';
+			$site_id        	= $site_url . '-' . $install_date . '-' . $unique_key;
 			$response          = wp_remote_post(
 				$feedback_url,
 				array(
 					'timeout' => 30,
 					'body'    => array(
-						'plugin_version' => $this->plugin_version,
-						'plugin_name'    => $this->plugin_name,
+						'server_info' => serialize($this->tmdivi_get_user_info()['server_info']),
+                        'extra_details' => serialize($this->tmdivi_get_user_info()['extra_details']),
+						'plugin_initial'  => isset($plugin_initial) ? sanitize_text_field($plugin_initial) : 'N/A',
+						'plugin_version' => sanitize_text_field($this->plugin_version),
+						'plugin_name'    => sanitize_text_field($this->plugin_name),
 						'reason'         => $deativation_reason,
 						'review'         => $sanitized_message,
 						'email'          => $admin_email,
 						'domain'         => $site_url,
+						'site_id'    	 => md5($site_id),
 					),
 				)
 			);
 
-			die( json_encode( array( 'response' => $response ) ) );
+			// die( json_encode( array( 'response' => $response ) ) );
 		}
 
 	}
