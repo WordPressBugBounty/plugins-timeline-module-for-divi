@@ -3,7 +3,7 @@
 Plugin Name: Timeline Module For Divi
 Plugin URI:  https://cooltimeline.com/divi/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=product_site&utm_content=plugins_list
 Description: A timeline module for Divi
-Version:     1.1.3
+Version:     1.1.4
 Author:      CoolPlugins
 Author URI:  https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=plugins_list
 License:     GPL2
@@ -27,7 +27,7 @@ along with Timeline Module For Divi. If not, see https://www.gnu.org/licenses/gp
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
 
-define('TMDIVI_V', '1.1.3');
+define('TMDIVI_V', '1.1.4');
 define('TMDIVI_DIR', plugin_dir_path(__FILE__));
 define('TMDIVI_URL', plugin_dir_url(__FILE__));
 define('TMDIVI_MODULE_URL', plugin_dir_url(__FILE__) . 'includes/modules');

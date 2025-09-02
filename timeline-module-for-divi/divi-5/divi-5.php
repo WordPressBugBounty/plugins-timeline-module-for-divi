@@ -13,7 +13,7 @@ require_once TMDIVI_DIR . 'divi-5/server/Modules/Modules.php';
 class Divi5_Visual_Builder_Assets {
 
   public function __construct(){
-    add_action( 'divi_visual_builder_assets_before_enqueue_packages', array($this,'tmdivi_divi5_enqueue_visual_builder_assets') );
+    add_action( 'divi_visual_builder_assets_before_enqueue_styles', array($this,'tmdivi_divi5_enqueue_visual_builder_assets') );
   }
 
   public function tmdivi_divi5_enqueue_visual_builder_assets() {
