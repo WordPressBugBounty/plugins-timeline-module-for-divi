@@ -3,13 +3,12 @@
 Plugin Name: Timeline Module For Divi
 Plugin URI:  https://cooltimeline.com/divi/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=product_site&utm_content=plugins_list
 Description: A timeline module for Divi
-Version:     1.1.7
+Version:     1.2.0
 Author:      CoolPlugins
 Author URI:  https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=plugins_list
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: timeline-module-for-divi
-Domain Path: /languages
 
 Timeline Module For Divi is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -27,7 +26,7 @@ along with Timeline Module For Divi. If not, see https://www.gnu.org/licenses/gp
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
 
-define('TMDIVI_V', '1.1.7');
+define('TMDIVI_V', '1.2.0');
 define('TMDIVI_DIR', plugin_dir_path(__FILE__));
 define('TMDIVI_URL', plugin_dir_url(__FILE__));
 define('TMDIVI_MODULE_URL', plugin_dir_url(__FILE__) . 'includes/modules');
@@ -47,7 +46,7 @@ class TMDIVI_Timeline_Module_For_Divi {
     }
 
     public function tmdivi_pro_plugin_link($links){
-        $get_pro_link = '<a href="https://www.elegantthemes.com/marketplace/timeline-module-for-divi-pro/" style="font-weight: bold; color: green;" target="_blank">Get Pro</a>';
+        $get_pro_link = '<a href="https://cooltimeline.com/plugin/timeline-module-for-divi/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=get_pro&utm_content=plugin_list" style="font-weight: bold; color: green;" target="_blank">Get Pro</a>';
 		array_push( $links, $get_pro_link );
 		return $links;
     }
@@ -61,9 +60,9 @@ class TMDIVI_Timeline_Module_For_Divi {
     }
     
     public function d5_extension_example_module_enqueue_frontend_scripts() {
-        if(wp_get_theme()->get('Version') >= 5){
+        if(wp_get_theme('Divi')->get('Version') >= 5){
             $plugin_dir_url = TMDIVI_URL;
-            wp_register_script( 'd5-timeline-line-filling', "{$plugin_dir_url}assets/js/tm_divi_vertical.min.js", array(), TMDIVI_V );
+            wp_register_script( 'd5-timeline-line-filling', "{$plugin_dir_url}assets/js/tm_divi_vertical.min.js", array(), TMDIVI_V, true );
     
             wp_enqueue_style( 'd5-timeline-style', "{$plugin_dir_url}styles/style.min.css", array(), TMDIVI_V);
             wp_enqueue_style( 'd5-timeline-helper-style', "{$plugin_dir_url}assets/css/divi-5-helper-css.css", array(), TMDIVI_V );
@@ -89,7 +88,7 @@ class TMDIVI_Timeline_Module_For_Divi {
     }
     
     public static function includes(){
-        if(wp_get_theme()->get('Version') >= 5){
+        if(wp_get_theme('Divi')->get('Version') >= 5){
             require_once TMDIVI_DIR . '/divi-5/divi-5.php';
             new Divi5_Visual_Builder_Assets();
         }        
@@ -102,6 +101,7 @@ class TMDIVI_Timeline_Module_For_Divi {
         if ($theme->name == $target || stripos($theme->parent_theme, $target) !== false) {
             return true;
         }
+        // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound	
         if (apply_filters('divi_ghoster_ghosted_theme', '') == $target) {
             return true;
         }

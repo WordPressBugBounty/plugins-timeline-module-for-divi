@@ -12,18 +12,6 @@ button[value="tmdivi/timeline"] .et-vb-icon{
     background-size:contain;
     background-repeat:no-repeat;
 }
-/* button[value="tmdivi/timeline"] .et-vb-icon::after{
-    content: "";
-    background-size:25px;
-    background-image: url('../../../timeline-module-for-divi/assets/image/divi-timeline-logo.png');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 14px;
-    left: 40px;
-    width: 40px;
-    height: 40px;
-    transform:translate(-50%, -50%);
-} */
 .tmdivi-icon .et-tmdivi-icon-fa{
     font-family:fontawesome;
     font-style: normal;

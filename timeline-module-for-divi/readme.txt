@@ -3,9 +3,9 @@ Contributors:coolplugins,narinder-singh,satindersingh
 Donate link: https://paypal.me/CoolPlugins/10USD/
 Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
-Tested up to: 6.8.2
+Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.1.7
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,7 @@ Whether you want to display your company’s history, highlight important milest
 ### Upgrade to Pro
 Upgrading to the Pro version gives you access to even more powerful features. With Pro, you can create **[horizontal timelines](https://cooltimeline.com/divi/horizontal-layout/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=view_horizontal_demos)** perfect for roadmaps, step-by-step guides, and product launches. You also get access to advanced customization options and event layout styles.
 
-**[Get Pro!](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=79863&url=84937)**
+**[Get Pro!](https://cooltimeline.com/plugin/timeline-module-for-divi/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=get_pro&utm_content=get_pro_plugin)**
 
 ### Where can you use the Timeline Module for Divi
 
@@ -182,6 +182,16 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 == Upgrade Notice ==
 
 == Changelog == 
+
+= Version 1.2.0 | 29 Jan 2026 =  
+- Fixed warnings reported by "Plugin Check" plugin.
+
+= Version 1.1.9 | 11 Dec 2025 =  
+- Tested: up to WordPress 6.9 and Divi beta version.
+
+= Version 1.1.8 | 18 Nov 2025 =  
+Improvements: Code improved.
+Improvements: Rating div styling.
 
 = Version 1.1.7 | 02 Sep 2025 =  
 Fixed: Missing divi-5 build folder.
