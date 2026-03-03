@@ -3,7 +3,7 @@
 Plugin Name: Timeline Module For Divi
 Plugin URI:  https://cooltimeline.com/divi/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=product_site&utm_content=plugins_list
 Description: A timeline module for Divi
-Version:     1.2.0
+Version:     1.2.1
 Author:      CoolPlugins
 Author URI:  https://coolplugins.net/?utm_source=tmdivi_plugin&utm_medium=inside&utm_campaign=author_page&utm_content=plugins_list
 License:     GPL2
@@ -26,7 +26,7 @@ along with Timeline Module For Divi. If not, see https://www.gnu.org/licenses/gp
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
 
-define('TMDIVI_V', '1.2.0');
+define('TMDIVI_V', '1.2.1');
 define('TMDIVI_DIR', plugin_dir_path(__FILE__));
 define('TMDIVI_URL', plugin_dir_url(__FILE__));
 define('TMDIVI_MODULE_URL', plugin_dir_url(__FILE__) . 'includes/modules');
@@ -52,10 +52,16 @@ class TMDIVI_Timeline_Module_For_Divi {
     }
 
     public function stop_browser_cache(){
-        if ( is_singular() && false !== strpos( get_post()->post_content, '[tmdivi_timeline_story' ) && (function_exists('et_core_is_fb_enabled') && et_core_is_fb_enabled())) {
-            header( 'Cache-Control: no-cache, no-store, must-revalidate' );
-            header( 'Pragma: no-cache' );
-            header( 'Expires: 0' );
+        $post = get_post();
+        if ( ! $post || ! isset( $post->post_content ) ) {
+            return;
+        }
+        if ( is_singular() && false !== strpos( $post->post_content, '[tmdivi_timeline_story' ) && ( function_exists( 'et_core_is_fb_enabled' ) && et_core_is_fb_enabled() ) ) {
+            if ( ! headers_sent() ) {
+                header( 'Cache-Control: no-cache, no-store, must-revalidate' );
+                header( 'Pragma: no-cache' );
+                header( 'Expires: 0' );
+            }
         }
     }
     
@@ -94,6 +100,9 @@ class TMDIVI_Timeline_Module_For_Divi {
         }        
         require_once TMDIVI_MODULE_DIR . '/assets-loader.php';
         new TMDIVI_AssetsLoader();
+
+        // Load marketing file upload option for Divi Contact Form
+		require_once TMDIVI_DIR . 'admin/marketing/marketing-contact-form-extender.php';   
     }
 
     public static function is_theme_activate($target){

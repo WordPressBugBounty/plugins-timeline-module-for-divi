@@ -5,7 +5,7 @@ Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,8 @@ It is a **[Divi Theme](https://www.elegantthemes.com/gallery/divi/)** Addon. In 
 * **Timeline Block For Gutenberg**: Create interactive timelines directly within the WordPress Block Editor to display step-by-step tutorials, a company’s history, and a product roadmap. **[View Demo](https://cooltimeline.com/demo/gutenberg-timeline-block/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbg_free_demo)**
 
 * **Timeline Builder**: Create a small timeline inside the Gutenberg block editor using a vertical or horizontal timeline. **[View Demo](https://cooltimeline.com/demo/timeline-builder-pro/?utm_source=tmdivi_plugin&utm_medium=readme&utm_campaign=demo&utm_content=tbp_view_demo)**
+
+**Use of 3rd Party Services:** This plugin connects to the Cool Plugins API to display information about related plugins inside the dashboard. It also offers optional usage tracking and optional feedback submission on deactivation. Data is sent only after explicit user consent. No hidden tracking is performed, and no frontend visitor or site user data is collected. For more details, please review our [Data Usage Policy](https://my.coolplugins.net/terms/usage-tracking/), [TOS](https://my.coolplugins.net/terms/), and [Privacy Policy](https://my.coolplugins.net/terms/privacy-policy/).
 
 == Installation ==
 
@@ -182,6 +184,9 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 == Upgrade Notice ==
 
 == Changelog == 
+
+= Version 1.2.1 | 03 Mar 2026 =  
+- Added Divi Form Extender recommendation.
 
 = Version 1.2.0 | 29 Jan 2026 =  
 - Fixed warnings reported by "Plugin Check" plugin.

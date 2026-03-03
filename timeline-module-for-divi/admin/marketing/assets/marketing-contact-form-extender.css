@@ -1,0 +1,84 @@
+/* Divi 4 Contact Form promo notice */
+.cfe-d4-promo {
+    position: relative;
+    padding: 16px 40px 16px 16px;
+    background: #f8fafc;
+    border: 1px solid #6c2eb9;
+    border-radius: 6px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.cfe-d4-promo__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: #e2e8f0;
+    color: #64748b;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.cfe-d4-promo__close:hover {
+    background: #cbd5e1;
+    color: #475569;
+}
+
+.cfe-promo-notice .cfe-d4-promo__title,.cfe-d4-promo__title {
+    margin: 0 0 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cfe-d4-promo__text {
+    margin: 0 0 14px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.cfe-d4-promo .cfe-d4-promo__btn{
+    background: #6c2eb9;
+}
+
+.cfe-d4-promo .cfe-d4-promo__btn:hover{
+    background: #6706de;
+}
+
+
+.cfe-d4-promo__btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1959ff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+.et-fb-form__group .cfe-d4-promo .cfe-d4-promo__reload-text, .cfe-d4-promo__reload-text{
+    margin-top: 10px;
+    line-height: unset;
+}
+
+.cfe-reload-page-btn{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cfe-d4-promo__btn:hover {
+    color: #fff;
+    background: #0349f9;
+}
