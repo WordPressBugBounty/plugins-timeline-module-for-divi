@@ -10,11 +10,20 @@ class TMDIVI_ModulesHelper{
     }
 
     public static function enqueue_google_font($font_family) {
-        $font_parts = explode('|', $font_family);
-        $font_family_name = $font_parts[0];
-        if ($font_family_name) {
-            wp_enqueue_style('tmdivi-gfonts-' . $font_family_name, "https://fonts.googleapis.com/css2?family=$font_family_name&display=swap", array(),TMDIVI_V, null);
+        $font_parts       = explode('|', $font_family);
+        $font_family_name = isset($font_parts[0]) ? trim($font_parts[0]) : '';
+        if ($font_family_name === '') {
+            return;
         }
+        $family_param = rawurlencode($font_family_name);
+        $font_url     = 'https://fonts.googleapis.com/css2?family=' . $family_param . '&display=swap';
+        wp_enqueue_style(
+            'tmdivi-gfonts-' . sanitize_key($font_family_name),
+            esc_url($font_url),
+            array(),
+            TMDIVI_V,
+            'all'
+        );
     }
 
     public static function extractFontProperties($fontString) {
@@ -516,7 +525,7 @@ class TMDIVI_ModulesHelper{
         }
 
         if ($heading_settings_font != '') {
-            $Font_properties = self::extractFontProperties($year_label_font);
+            $Font_properties = self::extractFontProperties($heading_settings_font);
             $font_weight = $Font_properties['fontWeight'] === null ? 'normal' : $Font_properties['fontWeight'];
 
             ET_Builder_Element::set_style(

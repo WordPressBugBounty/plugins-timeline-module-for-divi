@@ -498,6 +498,17 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 		 * Runs at priority 1 before wp_ajax_install_plugin; exits with error if slug is invalid.
 		 */
 		public function validate_plugin_install_slug() {
+			check_ajax_referer( 'updates', '_ajax_nonce' );
+
+			if ( ! current_user_can( 'install_plugins' ) ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'You do not have permission to install plugins.', 'events-calendar-modules-for-divi' ),
+					),
+					403
+				);
+			}
+
 			$slug = isset( $_REQUEST['slug'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['slug'] ) ) : '';
 			if ( $slug !== self::TARGET_PLUGIN_SLUG ) {
 				wp_send_json_error( array( 'message' => __( 'Invalid plugin. Only Contact Form Extender for Divi can be installed from here.', 'events-calendar-modules-for-divi' ) ) );
@@ -525,7 +536,16 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 			include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 			$init_file = sanitize_text_field( wp_unslash( $_POST['init'] ) );
-			$activate  = activate_plugin( $init_file, '', false, true );
+			if ( self::TARGET_PLUGIN_INIT !== $init_file ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'Invalid plugin. Only Contact Form Extender for Divi can be activated from here.', 'events-calendar-modules-for-divi' ),
+					),
+					400
+				);
+			}
+
+			$activate = activate_plugin( $init_file, '', false, true );
 
 			if ( is_wp_error( $activate ) ) {
 				wp_send_json_error( array( 'message' => $activate->get_error_message() ) );

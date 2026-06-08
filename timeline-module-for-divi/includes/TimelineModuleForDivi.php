@@ -24,7 +24,7 @@ class TMDIVI_TimelineModuleForDivi extends DiviExtension {
 	// 	if ( et_core_is_fb_enabled() ) {
 	// 		// Builder Bundle
 	// 		$hot_bundle_url = "http://localhost:3000/static/js/builder-bundle.js";
-	// 		wp_enqueue_script( "{$this->name}-builder-bundle", $hot_bundle_url, $this->_bundle_dependencies['builder'], $this->versiosn, true );
+	// 		wp_enqueue_script( "{$this->name}-builder-bundle", $hot_bundle_url, $this->_bundle_dependencies['builder'], $this->version, true );
 	// 	}
 	// }
 	/**

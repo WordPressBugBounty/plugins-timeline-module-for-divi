@@ -28,6 +28,9 @@ trait RenderCallbackTrait {
 
 		$timeline_line_filling = $attrs['timeline_fill_setting']['advanced']['desktop']['value'] ?? 'off';
 
+		if (!wp_style_is('d5-timeline-helper-style', 'enqueued')) {
+			wp_enqueue_style('d5-timeline-helper-style');
+		}
 		if($timeline_line_filling === 'on'){
 			wp_enqueue_script('d5-timeline-line-filling');
 		}

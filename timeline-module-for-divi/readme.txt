@@ -3,9 +3,9 @@ Contributors:coolplugins,narinder-singh,satindersingh
 Donate link: https://paypal.me/CoolPlugins/10USD/
 Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -185,6 +185,9 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog == 
 
+= Version 1.2.2 | 08 Jun 2026 =  
+- Improved: Plugin code quality and security.
+
 = Version 1.2.1 | 03 Mar 2026 =  
 - Added Divi Form Extender recommendation.
 
@@ -195,8 +198,8 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 - Tested: up to WordPress 6.9 and Divi beta version.
 
 = Version 1.1.8 | 18 Nov 2025 =  
-Improvements: Code improved.
-Improvements: Rating div styling.
+- Improvements: Code improved.
+- Improvements: Rating div styling.
 
 = Version 1.1.7 | 02 Sep 2025 =  
 Fixed: Missing divi-5 build folder.

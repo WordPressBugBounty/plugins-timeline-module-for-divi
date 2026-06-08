@@ -102,20 +102,21 @@ trait RenderCallbackTrait {
 	$html = '';
 	switch ($show_icon) {
         case 'on':
-            $html .= "<div class='{$icon_classes}'>
+            $html .= "<div class='". esc_attr($icon_classes) ."'>
                         {$story_icon}
                       </div>";
             break;
         default:
-            $html = "<div class='{$icon_classes}'></div>";
+            $html = "<div class='". esc_attr($icon_classes) ."'></div>";
     }
 	return $html;
   }
 
   private static function render_story_content($story_title,$media,$alt_tag,$content){
-	$sanitize_alt_tag = wp_kses_post($alt_tag);
+	$sanitize_alt_tag = esc_attr($alt_tag);
 	$sanitize_story_title_tag = wp_kses_post($story_title);
 	$content = wp_kses_post($content);
+	$media = esc_url($media);
 	
 	$media_html = ($media !== '') ? "<div class='tmdivi-media full'>
 			<img decoding='async' src='{$media}' alt='{$sanitize_alt_tag}' />
