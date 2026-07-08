@@ -26,8 +26,6 @@ trait RenderCallbackTrait {
 
 	  $story_wrapper_class = self::get_story_wrapper_class( $timeline_layout, $story_order);
 	  $icon_classes = self::get_icon_classes( $attrs['show_story_icon']['innerContent']['enable']['desktop']['value'] ?? '');
-	  $parent_default_attributes = ModuleRegistration::get_default_attrs( 'example/parent-module' );
-	  $parent_attrs_with_default = array_replace_recursive( $parent_default_attributes, $parent_attrs );
 
 	  $story_html = self::render_story(
 		  $attrs,
@@ -166,13 +164,11 @@ trait RenderCallbackTrait {
 		$story_title = $elements->render( [ 'attrName' => 'story_title', 'hoverSelector' => '{{parentSelector}}' ] );
 		$content = $elements->render( [ 'attrName' => 'content', 'hoverSelector' => '{{parentSelector}}' ] );
 
-		$select_icon_type = $attrs['select_icon_type']['innerContent']['desktop']['value'] ?? '';
 		$story_icons_image = $attrs['story_icons_image']['innerContent']['desktop']['value'] ?? '';
 		$story_icons_custom_text = $attrs['story_icons_custom_text']['innerContent']['desktop']['value'] ?? '';
 		$show_icon = $attrs['show_story_icon']['innerContent']['enable']['desktop']['value'] ?? '';
 
 		if(isset($attrs['icon'])){
-			$icon_lib_type = $attrs['icon']['innerContent']['desktop']['value']['type'] ?? '';
 			$icon_val = $attrs['icon']['innerContent']['desktop']['value'];
 			
 			if ( ! is_array( $icon_val ) ) {

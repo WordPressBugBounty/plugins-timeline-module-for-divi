@@ -1,4 +1,4 @@
-const convertInlineFont = (value) => (isString(value) ? value.split(',') : []);
+const convertInlineFont = (value) => (typeof value === 'string' ? value.split(',') : []);
 
 export const conversionOutline = {
   advanced: {
@@ -57,8 +57,14 @@ export const conversionOutline = {
     media:   'media.innerContent.*.src',
     media_alt_tag:   'media_alt_tag.innerContent.*',
     show_story_icon:   'show_story_icon.innerContent.enable.*',
-    story_icons: 'icon.innerContent.*',
-},
+    story_icons:   'icon.innerContent.*',
+    child_story_background_color: 'child_story_background_color.advanced.*',
+    child_story_heading_color: 'child_story_heading_color.advanced.*',
+    child_story_description_color: 'child_story_description_color.advanced.*',
+    child_story_label_color: 'child_story_label_color.advanced.*',
+    child_story_sub_label_color: 'child_story_sub_label_color.advanced.*',
+    inline_fonts: 'content.decoration.inlineFont.*.families',
+  },
   valueExpansionFunctionMap: {
     inline_fonts: convertInlineFont
   },

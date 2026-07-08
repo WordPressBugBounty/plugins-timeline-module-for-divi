@@ -1,12 +1,11 @@
 (function($){
     $(document).ready(function(){
-        let plugin_name = 'timeline-module-for-divi';
-        let plugin_slug = 'timeline-module-for-divi';
+        const plugin_slug = 'timeline-module-for-divi';
         
-        $target = $('#the-list').find('[data-slug="'+plugin_name+'"] span.deactivate a');
+        var $target = $('#the-list').find('[data-slug="'+plugin_slug+'"] span.deactivate a');
         var plugin_deactivate_link = $target.attr('href');
 
-        $($target).on('click', function(event){
+        $target.on('click', function(event){
             event.preventDefault();
             $('#wpwrap').css('opacity','0.4');
 

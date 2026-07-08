@@ -1,7 +1,14 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+if ( ! defined( 'TMDIVI_JSON_PATH' ) ) {
+	define( 'TMDIVI_JSON_PATH', TMDIVI_DIR . 'divi-5/modules-json/' );
+}
+
 // Require php files.
+require_once TMDIVI_MODULE_DIR . '/ModulesCore/Helper.php';
 require_once TMDIVI_DIR . 'divi-5/vendor/autoload.php';
+require_once TMDIVI_DIR . 'divi-5/server/Conversion/FontFieldConversion.php';
 require_once TMDIVI_DIR . 'divi-5/server/Modules/Modules.php';
 
 /**
@@ -25,29 +32,22 @@ class Divi5_Visual_Builder_Assets {
         }
       </style>
       <?php
-      wp_enqueue_script(
-        'timeline-module-for-divi-visual-builder',
-        TMDIVI_URL . 'divi-5/visual-builder/build/tmdivi-timeline-module-for-divi-conversion.js',
+      \ET\Builder\VisualBuilder\Assets\PackageBuildManager::register_package_build(
         [
-          'react',
-          'jquery',
-          'divi-module-library',
-          'wp-hooks',
-          'divi-rest',
-        ],
-        TMDIVI_V,
-        false
+          'name'    => 'timeline-module-for-divi-visual-builder',
+          'version' => TMDIVI_V,
+          'script'  => [
+            'src'                => TMDIVI_URL . 'divi-5/visual-builder/build/tmdivi-timeline-module-for-divi-conversion.js',
+            'deps'               => [
+              'divi-module-library',
+              'divi-vendor-wp-hooks',
+            ],
+            'enqueue_top_window' => false,
+            'enqueue_app_window' => true,
+          ],
+        ]
       );
 
-      wp_enqueue_script(
-        'tmdivi5-editor-helper',
-        TMDIVI_URL . 'assets/js/tmdivi5-editor-helper.js',
-        [
-          'jquery',
-        ],
-        TMDIVI_V,
-        false
-      );
       if (!wp_style_is('tmdivi-fontawesome-css', 'enqueued')) {
         wp_enqueue_style('tmdivi-fontawesome-css');
       }
@@ -57,4 +57,3 @@ class Divi5_Visual_Builder_Assets {
     }
   }
 }
-

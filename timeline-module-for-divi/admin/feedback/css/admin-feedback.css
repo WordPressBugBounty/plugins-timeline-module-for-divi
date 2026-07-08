@@ -91,7 +91,8 @@
 .cp-feedback-input-wrapper .cp-feedback-input:not(:checked)~.cp-feedback-text {
     display: none;
 }
-.cp-feedback-input-wrapper input[type=radio] {
+.cp-feedback-input-wrapper input[type=radio],
+.cp-feedback-terms input[type=checkbox] {
     margin-top: 2px;
     margin-right: 8px;
 }
@@ -109,10 +110,6 @@
     line-height: 1.4em;
     font-style: italic;
     margin: 10px 0;
-}
-.cp-feedback-terms input[type=checkbox] {
-    margin-top: 2px;
-    margin-right: 8px;
 }
 .cp-feedback-input-wrapper label,
 .cp-feedback-terms label {

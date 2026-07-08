@@ -12,7 +12,6 @@ trait ModuleScriptDataTrait {
   public static function module_script_data( $args ) {
 		// Assign variables.
 		$id             = $args['id'] ?? '';
-		$name           = $args['name'] ?? '';
 		$selector       = $args['selector'] ?? '';
 		$attrs          = $args['attrs'] ?? [];
 		$store_instance = $args['storeInstance'] ?? null;

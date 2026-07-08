@@ -8,8 +8,6 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
     // Module slug (also used as shortcode tag)
     public $slug = 'tmdivi_timeline';
 
-    public $icon_path;
-
     public static $timeline_order = 1;
 
     // Full Visual Builder support
@@ -34,7 +32,6 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
         // Module Icon
         // Load customized svg icon and use it on builder as module icon. If you don't have svg icon, you can use
         // $this->icon for using etbuilder font-icon. (See CustomCta / DICM_CTA class)
-        // $this->icon_path = TMDIVI_URL . 'assets/image/Timeline-logo.svg';
 
         // Toggle settings
         $this->settings_modal_toggles = array(
@@ -548,6 +545,8 @@ class TMDIVI_Timeline extends TMDIVI_Builder_Module{
         if($props['content'] !== ""){
             return $this->_render_module_wrapper($output, $render_slug);
         }
+
+        return '';
     }
 
 }

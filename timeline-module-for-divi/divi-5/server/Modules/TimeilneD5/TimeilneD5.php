@@ -28,7 +28,7 @@ class TimeilneD5 implements DependencyInterface {
   use TimeilneD5Traits\ModuleScriptDataTrait;
 
   public function load() {
-    $module_json_folder_path = dirname( __DIR__, 3 ) . '/visual-builder/src/modules/Timeline';
+    $module_json_folder_path = TMDIVI_JSON_PATH . 'timeline/';
 
     add_action(
       'init',
@@ -39,7 +39,8 @@ class TimeilneD5 implements DependencyInterface {
             'render_callback' => [ TimeilneD5::class, 'render_callback' ],
           ]
         );
-      }
+      },
+      9
     );
   }
 }

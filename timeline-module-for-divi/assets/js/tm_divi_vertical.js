@@ -1,21 +1,28 @@
 (function($) {
 
+    var $window = $(window);
+    var half_viewport = $window.height() / 2;
+
+    $window.on('resize', function() {
+        half_viewport = $window.height() / 2;
+    });
+
     function tmdivi_scroll_callback(tm) {
+
+        if (tm.length < 1) {
+            return false;
+        }
 
         const timelineEntry = tm.find('.tmdivi-story');
         const outer_line = tm.find('.tmdivi-line');
         const inner_line = tm.find('.tmdivi-inner-line');
         const year_container = tm.find('.tmdivi-year-container');
 
-        if (tm.length < 1) {
-            return false;
-        }
         // fill line color start
         var rootElement = document.documentElement;
-        var half_viewport = (jQuery(window).height()) / 2;
         var lineID = outer_line[0];
 
-        if (lineID == null) {
+        if (lineID === null) {
             return;
         }
         var rect = lineID.getBoundingClientRect();
@@ -29,7 +36,7 @@
         }
         var lineInnerHeight = timelineTop + half_viewport;
         var outer_line_height = outer_line.outerHeight();
-        var timeline_position = jQuery(tm).offset().top;
+        var timeline_position = tm.offset().top;
         var timeline_top = timeline_position - rootElement.scrollTop;
 
         tm.addClass("tmdivi-start-out-viewport");
@@ -54,9 +61,10 @@
 
         for (var i = 0; i < timelineEntry.length; i++) {
 
-            const icon=jQuery(timelineEntry[i]).find('.tmdivi-icon, .tmdivi-icondot');
-            const iconPosition=icon.length > 0 ? icon[0].offsetTop : 0;
-            timelineEntry_position = jQuery(timelineEntry[i]).offset().top + iconPosition;
+            var $entry = $(timelineEntry[i]);
+            const icon = $entry.find('.tmdivi-icon, .tmdivi-icondot');
+            const iconPosition = icon.length > 0 ? icon[0].offsetTop : 0;
+            timelineEntry_position = $entry.offset().top + iconPosition;
 
             timelineEntry_top = timelineEntry_position - rootElement.scrollTop;
 
@@ -71,7 +79,8 @@
         //fill year_container border
         for (var i = 0; i < year_container.length; i++) {
 
-            year_container_pos = jQuery(year_container[i]).offset().top;
+            var $year = $(year_container[i]);
+            year_container_pos = $year.offset().top;
 
             year_container_top = year_container_pos - rootElement.scrollTop + 35;
 
@@ -86,15 +95,22 @@
 
     $(document).ready(function() {
         $('.tmdivi-wrapper').each(function() {
-            var timeline = $(this); 
+            var timeline = $(this);
             var lineFilling = timeline.data("line-filling");
             if (lineFilling !== undefined && lineFilling) {
-                tmdivi_scroll_callback(timeline)
-                window.addEventListener("scroll", ()=>{
-                    tmdivi_scroll_callback(timeline)
-                }); 
+                tmdivi_scroll_callback(timeline);
+                var scrollTicking = false;
+                window.addEventListener("scroll", function() {
+                    if (!scrollTicking) {
+                        scrollTicking = true;
+                        window.requestAnimationFrame(function() {
+                            tmdivi_scroll_callback(timeline);
+                            scrollTicking = false;
+                        });
+                    }
+                });
             }
         });
-    });  
+    });
 
 })(jQuery);

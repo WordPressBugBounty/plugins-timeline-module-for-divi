@@ -1,4 +1,4 @@
-const convertInlineFont = (value) => (isString(value) ? value.split(',') : []);
+const convertInlineFont = (value) => (typeof value === 'string' ? value.split(',') : []);
 
 export const conversionOutline = {
   advanced: {
@@ -19,13 +19,9 @@ export const conversionOutline = {
     max_width:      'module.decoration.sizing',
     height:         'module.decoration.sizing',
     link_options:   'module.advanced.link',
-    fonts:      {
-      header:         'story_title.decoration.font',
-      body:           'content.decoration.bodyFont.body',
-      body_link:      'content.decoration.bodyFont.link',
-      body_ul:        'content.decoration.bodyFont.ul',
-      body_ol:        'content.decoration.bodyFont.ol',
-      body_quote:     'content.decoration.bodyFont.quote',
+    fonts: {
+      heading_settings:     'story_title.decoration.font',
+      description_settings: 'content.decoration.bodyFont.body',
     },
     text_shadow:     {
       default: 'module.advanced.text.textShadow',
@@ -33,8 +29,9 @@ export const conversionOutline = {
     box_shadow: {
       default: 'module.decoration.boxShadow',
     },
-    borders:        {
-      default: 'module.decoration.border',
+    borders: {
+      default:        'module.decoration.border',
+      story_settings: 'module.decoration.border',
     },
     filters:   {
       default: 'module.decoration.filters',
@@ -49,14 +46,51 @@ export const conversionOutline = {
   },
   module: {
     timeline_layout: 'timeline_layout.advanced.layout.*.timeline_layout',
+    story_background_color: 'story_background_color.advanced.*',
+    background_main: 'module.decoration.background.*.color',
+    timeline_color: 'timeline_color.advanced.*',
+    timeline_fill_color: 'timeline_fill_color.advanced.*',
+    timeline_fill_setting: 'timeline_fill_setting.advanced.*',
+    timeline_line_width: 'timeline_line_width.advanced.*',
     icon_color: 'icon_color.advanced.*',
     icon_background_color: 'icon_background_color.advanced.*',
-    timeline_color: 'timeline_color.advanced.*',
-    story_background_color: 'story_background_color.advanced.*',
-    timeline_fill_setting: 'timeline_fill_setting.advanced.*',
-    timeline_fill_color: 'timeline_fill_color.advanced.*',
+    labels_position: 'labels_position.advanced.*',
+    labels_spacing_bottom: 'labels_spacing_bottom.advanced.*',
+    story_spacing_top: 'story_spacing_top.advanced.*',
+    story_spacing_bottom: 'story_spacing_bottom.advanced.*',
+    story_padding: 'module.decoration.spacing.*.padding',
+    heading_font_color: 'story_title.decoration.font.font.*.color',
+    heading_background_color: 'story_title.decoration.font.font.*.background',
+    heading_text_align: 'story_title.decoration.font.font.*.textAlign',
+    heading_text_size: 'story_title.decoration.font.font.*.size',
+    heading_line_height: 'story_title.decoration.font.font.*.lineHeight',
+    heading_custom_padding: 'story_title.decoration.spacing.*.padding',
+    description_font_color: 'content.decoration.bodyFont.body.font.*.color',
+    description_background_color: 'content.decoration.bodyFont.body.font.*.background',
+    description_text_align: 'content.decoration.bodyFont.body.font.*.textAlign',
+    description_text_size: 'content.decoration.bodyFont.body.font.*.size',
+    description_line_height: 'content.decoration.bodyFont.body.font.*.lineHeight',
+    description_custom_padding: 'content.decoration.spacing.*.padding',
+    label_font: 'label_date.decoration.font',
+    label_font_color: 'label_date.decoration.font.font.*.color',
+    label_font_size: 'label_date.decoration.font.font.*.size',
+    sub_label_font: 'sub_label.decoration.font',
+    sub_label_font_color: 'sub_label.decoration.font.font.*.color',
+    sub_label_font_size: 'sub_label.decoration.font.font.*.size',
+    year_label_font: 'label_text.decoration.font',
+    year_label_font_color: 'label_text.decoration.font.font.*.color',
+    year_label_bg_color: 'label_text.decoration.font.font.*.background',
+    year_label_box_size: 'year_label_box_size.advanced.*',
+    year_label_font_size: 'label_text.decoration.font.font.*.size',
+    inline_fonts: 'content.decoration.inlineFont.*.families',
   },
   valueExpansionFunctionMap: {
-    inline_fonts: convertInlineFont
+    inline_fonts: convertInlineFont,
+    label_font: 'tmdivi_free_convert_d4_font_field',
+    sub_label_font: 'tmdivi_free_convert_d4_font_field',
+    year_label_font: 'tmdivi_free_convert_d4_font_field',
+    story_padding: 'convertSpacing',
+    heading_custom_padding: 'convertSpacing',
+    description_custom_padding: 'convertSpacing',
   },
 };

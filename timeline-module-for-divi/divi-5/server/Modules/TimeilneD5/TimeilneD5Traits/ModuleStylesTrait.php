@@ -13,70 +13,12 @@ trait ModuleStylesTrait {
 
   use CustomCssTrait;
 
-	public static function enqueue_google_font($font_family) {
-		$font_parts       = explode('|', $font_family);
-		$font_family_name = isset($font_parts[0]) ? trim($font_parts[0]) : '';
-		if ($font_family_name === '') {
-			return;
-		}
-		$family_param = rawurlencode($font_family_name);
-		$font_url     = 'https://fonts.googleapis.com/css2?family=' . $family_param . '&display=swap';
-		wp_enqueue_style(
-			'tmdivi-gfonts-' . sanitize_key($font_family_name),
-			esc_url($font_url),
-			array(),
-			TMDIVI_V,
-			'all'
-		);
-	}
-  	public static function extractFontProperties($fontString) {
-		$fontParts = explode('|', $fontString);
-		$fontFamily = $fontParts[0];
-		$fontWeight = !empty($fontParts[1]) ? $fontParts[1] : '';
-		$fontStyle = !empty($fontParts[2]) ? "italic" : 'normal'; 
-
-		// Determine text transform
-		if (!empty($fontParts[3])) {
-			$textTransform = "uppercase";
-		} elseif (!empty($fontParts[5])) {
-			$textTransform = "capitalize";
-		} else {
-			$textTransform = "none";
-		}
-
-		// Determine text decoration
-		if (!empty($fontParts[4]) && !empty($fontParts[6])) {
-			$textDecoration = "line-through";
-		} elseif (!empty($fontParts[4])) {
-			$textDecoration = "underline";
-		} elseif (!empty($fontParts[6])) {
-			$textDecoration = "line-through";
-		} else {
-			$textDecoration = "none";
-		}
-
-		$textDecorationLineColor = (!empty($fontParts[7])) ? $fontParts[7] : ''; 
-		$textDecorationStyle = (!empty($fontParts[8])) ? $fontParts[8] : ''; 
-
-		return array(
-			'fontFamily' => $fontFamily,
-			'fontWeight' => $fontWeight,
-			'fontStyle' => $fontStyle,
-			'textTransform' => $textTransform,
-			'textDecoration' => $textDecoration,
-			'textDecorationLineColor' => $textDecorationLineColor,
-			'textDecorationStyle' => $textDecorationStyle,
-		);
-	}
-
   public static function module_styles( $args ) {
 		$attrs        = $args['attrs'] ?? [];
-		$parent_attrs = $args['parentAttrs'] ?? [];
 		$order_class  = $args['orderClass'];
 		$elements     = $args['elements'];
 		$settings     = $args['settings'] ?? [];
 
-		$icon_selector = "{$order_class} .et-pb-icon";
 
 		Style::add(
 			[
@@ -484,8 +426,8 @@ trait ModuleStylesTrait {
 							'declarationFunction' => function ( $declaration_function_args ) use ( $args ) {
 								$data = $args['attrs']['unknownAttributes']['label_font'] ?? '';
 							
-								self::enqueue_google_font($data);
-								$data = self::extractFontProperties($data);
+								\TmdiviHelper::enqueue_google_font($data);
+								$data = \TmdiviHelper::extractFontProperties($data);
 
 								$font_family = (!empty($data) && !empty($data['fontFamily'])) ? $data['fontFamily'] : 'Sans serif'; 	
 								$font_weight = (!empty($data['fontFamily']) && !empty($data['fontWeight'])) ? $data['fontWeight'] : 'bold'; 	
@@ -511,8 +453,8 @@ trait ModuleStylesTrait {
 							'declarationFunction' => function ( $declaration_function_args ) use ( $args ) {
 								$data = $args['attrs']['unknownAttributes']['sub_label_font'] ?? '';
 
-								self::enqueue_google_font($data);
-								$data = self::extractFontProperties($data);
+								\TmdiviHelper::enqueue_google_font($data);
+								$data = \TmdiviHelper::extractFontProperties($data);
 
 								$font_family = (!empty($data) && !empty($data['fontFamily'])) ? $data['fontFamily'] : 'Sans serif'; 	
 								$font_weight = (!empty($data['fontFamily']) && !empty($data['fontWeight'])) ? $data['fontWeight'] : 'bold'; 	
@@ -538,8 +480,8 @@ trait ModuleStylesTrait {
 							'declarationFunction' => function ( $declaration_function_args ) use ( $args ) {
 								$data = $args['attrs']['unknownAttributes']['year_label_font'] ?? '';
  
-								self::enqueue_google_font($data);
-								$data = self::extractFontProperties($data);
+								\TmdiviHelper::enqueue_google_font($data);
+								$data = \TmdiviHelper::extractFontProperties($data);
 
 								$font_family = (!empty($data) && !empty($data['fontFamily'])) ? $data['fontFamily'] : 'Sans serif'; 	
 								$font_weight = (!empty($data['fontFamily']) && !empty($data['fontWeight'])) ? $data['fontWeight'] : 'bold'; 	
@@ -565,8 +507,8 @@ trait ModuleStylesTrait {
 							'declarationFunction' => function ( $declaration_function_args ) use ( $args ) {
 								$data = $args['attrs']['unknownAttributes']['heading_settings_font'] ?? '';
 
-								self::enqueue_google_font($data);
-								$data = self::extractFontProperties($data);
+								\TmdiviHelper::enqueue_google_font($data);
+								$data = \TmdiviHelper::extractFontProperties($data);
 
 								$font_family = (!empty($data) && !empty($data['fontFamily'])) ? $data['fontFamily'] : 'Sans serif'; 	
 								$font_weight = (!empty($data['fontFamily']) && !empty($data['fontWeight'])) ? $data['fontWeight'] : 'bold'; 	
@@ -591,8 +533,8 @@ trait ModuleStylesTrait {
 							'declarationFunction' => function ( $declaration_function_args ) use ( $args ) {
 								$data = $args['attrs']['unknownAttributes']['description_settings_font'] ?? '';
 
-								self::enqueue_google_font($data);
-								$data = self::extractFontProperties($data);
+								\TmdiviHelper::enqueue_google_font($data);
+								$data = \TmdiviHelper::extractFontProperties($data);
 
 								$font_family = (!empty($data) && !empty($data['fontFamily'])) ? $data['fontFamily'] : 'Sans serif'; 	
 

@@ -34,17 +34,6 @@ trait RenderCallbackTrait {
 		if($timeline_line_filling === 'on'){
 			wp_enqueue_script('d5-timeline-line-filling');
 		}
-		$timeline_layout_class;
-		switch($timeline_layout){
-		  case "one-side-left":
-			$timeline_layout_class = "tmdivi-vertical-right";
-			break;
-		case "one-side-right":
-			$timeline_layout_class = "tmdivi-vertical-left";
-			break;
-		default:
-			$timeline_layout_class = "both-side";
-		}
 
 		switch($timeline_layout){
 			case "one-side-left":

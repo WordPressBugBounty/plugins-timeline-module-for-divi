@@ -113,14 +113,11 @@ class TMDIVI_feedback {
 		$ajax_url      = esc_url( admin_url( 'admin-ajax.php' ) );
 		$ajax_callback      = 'tmdivi_dismiss_notice';
 		$wrap_cls           = 'notice notice-info is-dismissible';
-		$img_path      = '';
 		$p_name             = esc_html__('Timeline Module For Divi', 'timeline-module-for-divi');
 		$like_it_text       = esc_html__('Rate Now! ★★★★★', 'timeline-module-for-divi');
 		$already_rated_text = esc_html__('Already Reviewed', 'timeline-module-for-divi');
 		$not_interested     = esc_html__('Not Interested', 'timeline-module-for-divi');
-		$not_like_it_text   = esc_html__('No, not good enough, i do not like to rate it!', 'timeline-module-for-divi');
 		$p_link             = esc_url($this->review_link);
-		$pro_url            = $this->buy_link;
 
 		$raw_message = "Thanks for using <b>$p_name</b> WordPress plugin. We hope it meets your expectations! <br/>Please give us a quick rating, it works as a boost for us to keep working on more <a href='https://coolplugins.net' target='_blank'><strong>Cool Plugins</strong></a>!<br/>";
 
@@ -137,13 +134,13 @@ class TMDIVI_feedback {
 		$message = wp_kses($raw_message, $allowed_html);
 
 
-		$html = '<div data-ajax-url="%8$s"  data-ajax-callback="%9$s" class="cool-feedback-notice-wrapper %1$s" data-wp-nonce="%12$s">
-			<div class="message_container">%4$s
+		$html = '<div data-ajax-url="%6$s"  data-ajax-callback="%7$s" class="cool-feedback-notice-wrapper %1$s" data-wp-nonce="%9$s">
+			<div class="message_container">%2$s
 				<div class="callto_action">
 					<ul>
-						<li class="love_it"><a href="%5$s" class="like_it_btn button button-primary" target="_new" title="%6$s">%6$s</a></li>
-						<li class="already_rated"><a href="javascript:void(0);" class="already_rated_btn button tmdivi_dismiss_notice" title="%7$s">%7$s</a></li>
-						<li class="already_rated"><a href="javascript:void(0);" class="already_rated_btn button tmdivi_dismiss_notice" title="%11$s">%11$s</a></li>
+						<li class="love_it"><a href="%3$s" class="like_it_btn button button-primary" target="_new" title="%4$s">%4$s</a></li>
+						<li class="already_rated"><a href="javascript:void(0);" class="already_rated_btn button tmdivi_dismiss_notice" title="%5$s">%5$s</a></li>
+						<li class="already_rated"><a href="javascript:void(0);" class="already_rated_btn button tmdivi_dismiss_notice" title="%8$s">%8$s</a></li>
 					</ul>
 				<div class="clrfix"></div>
 				</div>
@@ -153,15 +150,12 @@ class TMDIVI_feedback {
 		return sprintf(
 			$html,
 			$wrap_cls,
-			$img_path,
-			$p_name,
 			$message,
 			$p_link,
 			$like_it_text,
 			$already_rated_text,
-			$ajax_url, // 8
-			$ajax_callback, // 9
-			$pro_url, // 10
+			$ajax_url,
+			$ajax_callback,
 			$not_interested,
 			$wp_nonce
 		);

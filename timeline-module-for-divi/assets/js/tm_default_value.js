@@ -4,7 +4,6 @@ jQuery(function($) {
     
     $(window).on('load',()=>{
 
-        console.log(window.ETBuilderBackend.defaults)
         is_vb &&
             window.ETBuilderBackend &&
             window.ETBuilderBackend.defaults && 

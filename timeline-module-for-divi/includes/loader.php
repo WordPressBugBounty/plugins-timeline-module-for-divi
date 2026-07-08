@@ -16,4 +16,5 @@ foreach ((array) $module_files as $module_file) {
     }
 }
 
+require_once plugin_dir_path(__FILE__) . 'modules/ModulesCore/Helper.php';
 require_once plugin_dir_path(__FILE__) . 'modules/ModulesCore/ModulesHelper.php';

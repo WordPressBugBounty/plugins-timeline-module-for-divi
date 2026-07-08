@@ -16,6 +16,19 @@ export const timeline = {
   renderers: {
     edit: TimelineEdit,
   },
+  placeholderContent: {
+    timeline_layout: {
+      advanced: {
+        layout: {
+          desktop: {
+            value: {
+              timeline_layout: 'both-side',
+            },
+          },
+        },
+      },
+    },
+  },
   childrenName: ['tmdivi/timeline-story'],
   template:     [
     ['tmdivi/timeline-story', {}],

@@ -685,16 +685,18 @@
     }
     
     .tmdivi-vertical.tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-title {
+      /* justify-content: var(--tw-cbx-text-align-alternate); */
       justify-content: var(--tw-cbx-text-align);
+      text-align: var(--tw-cbx-text-align-alternate);
     }
     
     .tmdivi-vertical.tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-media {
       justify-content: var(--tw-cbx-img-align, var(--tw-cbx-text-align-alternate));
     }
     /* .tmdivi-vertical.tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-description {
-      text-align: var(--tw-cbx-des-text-align);
-    }
-     */
+      text-align: var(--tw-cbx-text-align-alternate); */
+      /* text-align: var(--tw-cbx-des-text-align);
+    } */
     
     .tmdivi-vertical.tmdivi-wrapper .tmdivi-story.tmdivi-story-left .tmdivi-button {
       justify-content: var(--tw-cbx-btn-align, var(--tw-cbx-text-align-alternate));

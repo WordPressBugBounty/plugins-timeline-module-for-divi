@@ -9,7 +9,6 @@ class TMDIVI_TimelineChild extends TMDIVI_Builder_Module{
     private static $story_order = 0;
 
 
-    protected $options_tabs;
     // Module slug (also used as shortcode tag)
     public $slug = 'tmdivi_timeline_story';
 
@@ -39,13 +38,6 @@ class TMDIVI_TimelineChild extends TMDIVI_Builder_Module{
 
         // Module item's modal title
         $this->settings_text = esc_html__('Timeline Story Settings', 'timeline-module-for-divi');
-
-        $this->options_tabs = array(
-            'demo' => array(
-                'name' => esc_html__('Demo', 'timeline-module-for-divi'),
-            ),
-        );
-
 
         // Toggle settings
         // Toggles are grouped into array of tab name > toggles > toggle definition
@@ -364,9 +356,6 @@ class TMDIVI_TimelineChild extends TMDIVI_Builder_Module{
         return $html;
     }
 
-    // protected function _render_module_wrapper( $output = '', $render_slug = '' ) {
-    //     return $output;
-    // } 
 }
 
 new TMDIVI_TimelineChild;

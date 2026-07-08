@@ -27,8 +27,7 @@ class TimelineD5item implements DependencyInterface {
   use TimelineD5itemTraits\ModuleStylesTrait;
 
   public function load() {
-    
-    $module_json_folder_path = dirname( __DIR__, 3 ) . '/visual-builder/src/modules/Timeline-item';
+    $module_json_folder_path = TMDIVI_JSON_PATH . 'timeline-item/';
 
     add_action(
       'init',
@@ -39,7 +38,8 @@ class TimelineD5item implements DependencyInterface {
             'render_callback' => [ TimelineD5item::class, 'render_callback' ],
           ]
         );
-      }
+      },
+      9
     );
   }
 }
