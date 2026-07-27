@@ -5,7 +5,7 @@ Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.2.4
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -114,7 +114,7 @@ It is a **[Divi Theme](https://www.elegantthemes.com/gallery/divi/)** Addon. In 
 - With the plugin active, go to the page or post where you'd like to add a timeline.
 - Click on the **Edit with Divi Builder** button to launch the Divi Builder.
 
-#### 2. Add the Timeline Module:
+#### 2. Open Any Page or Post:
 
 - In the Divi Builder, click the **+** icon to add a new module.
 - From the list of modules, select the **Timeline** module.
@@ -184,6 +184,13 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 == Upgrade Notice ==
 
 == Changelog == 
+
+= Version 1.3.0 | 27 July 2026 =
+
+- New: Introduced a“Get Started”onboarding page for a smoother setup experience.
+- New: Added a guided sample timeline demo creation flow to help users get started quickly.
+- Removed: Removed the legacy dashboard and replaced it with the new onboarding experience.
+- Improved: Simplified the initial setup process with a quick-start demo.
 
 = Version 1.2.4 | 08 Jul 2026 =  
 - Improved: Plugin code quality.
@@ -259,9 +266,11 @@ Migration from Divi 4 to Divi 5 will only be supported till Divi 5 Public Alpha 
 
 == Upgrade Notice ==
 
-= Version 1.1.0 | 27 Mar 2025 =  
-- Added: Compatibility with Divi 5.  
-- Fixed: Minor bugs for improved stability.  
-- Improved: Design tweaks for better UI/UX.  
+= Version 1.3.0 | 27 July 2026 =
+
+- New: Introduced a“Get Started”onboarding page for a smoother setup experience.
+- New: Added a guided sample timeline demo creation flow to help users get started quickly.
+- Removed: Removed the legacy dashboard and replaced it with the new onboarding experience.
+- Improved: Simplified the initial setup process with a quick-start demo.
 
 

@@ -1,4 +1,6 @@
 <?php
+
+// phpcs:disable WordPress.WP.I18n.TextDomainMismatch, WordPress.Security.NonceVerification.Recommended ,WordPress.DB.PreparedSQL.NotPrepared
 /**
  * Marketing promo for Contact Form Extender for Divi (Divi 4 & 5).
  *
@@ -320,7 +322,7 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 				)
 				LIMIT 1
 			", $like_shortcode, $like_block);
-		
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery , WordPress.DB.DirectDatabaseQuery.NoCaching
 			$result = $wpdb->get_var($sql);
 			return ! empty($result);
 		}
