@@ -32,6 +32,20 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 		private const TARGET_PLUGIN_INIT = 'contact-form-extender-for-divi-builder/contact-form-extender-for-divi-builder.php';
 
 
+		/**
+		 * Main file names of the pro build of the same product.
+		 *
+		 * The pro plugin ships under more than one folder name
+		 * (divi-contact-form-extender, cp-divi-contact-form-extender), so it is
+		 * matched on its main file name instead of a fixed plugin basename.
+		 *
+		 * @var array
+		 */
+		private const PRO_PLUGIN_MAIN_FILES = array(
+			'divi-contact-form-extender.php',
+			'cp-divi-contact-form-extender.php',
+		);
+
 		private const INSTALL_SOURCE_OPTION = 'cfefd_install_source';
 
 		public function __construct() {
@@ -557,6 +571,46 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 		}
 
 		/**
+		 * Whether the pro build of Contact Form Extender is present on this site.
+		 *
+		 * Installation is enough, not just activation: offering the free plugin to a
+		 * site that already has the pro version is never useful.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return bool
+		 */
+		private function is_pro_plugin_present() {
+			static $present = null;
+
+			if ( null !== $present ) {
+				return $present;
+			}
+
+			// Defined by the pro build as soon as it loads, whatever folder it sits in.
+			if ( defined( 'DCFE_PLUGIN_VERSION' ) || defined( 'DCFE_PLUGIN_FILE' ) ) {
+				$present = true;
+
+				return $present;
+			}
+
+			if ( ! function_exists( 'get_plugins' ) ) {
+				require_once ABSPATH . 'wp-admin/includes/plugin.php';
+			}
+
+			$present = false;
+
+			foreach ( array_keys( get_plugins() ) as $plugin_file ) {
+				if ( in_array( basename( $plugin_file ), self::PRO_PLUGIN_MAIN_FILES, true ) ) {
+					$present = true;
+					break;
+				}
+			}
+
+			return $present;
+		}
+
+		/**
 		 * Determine plugin status.
 		 *
 		 * @return string not_installed|inactive|active
@@ -564,6 +618,11 @@ if ( ! class_exists( 'CFE_Marketing' ) ) {
 		private function get_plugin_status() {
 			if ( ! function_exists( 'get_plugins' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
+			}
+
+			// The pro build already provides these features, so the promo is satisfied.
+			if ( $this->is_pro_plugin_present() ) {
+				return 'active';
 			}
 
 			$plugin_file = self::TARGET_PLUGIN_INIT;
