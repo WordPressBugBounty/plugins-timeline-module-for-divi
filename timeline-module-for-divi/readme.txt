@@ -5,7 +5,7 @@ Tags: divi timeline, timeline, horizontal timeline, history, roadmap
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -185,6 +185,9 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog == 
 
+= Version 1.3.2 | 08 September 2026 =
+- Improved: Review notice and feedback form design for a better user experience.
+
 = Version 1.3.1 | 07 Sept 2026 =
 - Improved: Admin marketing notice visibility checks.
 
@@ -268,12 +271,6 @@ Fixed: Deprecation hook error with Alpha 22.
 Migration from Divi 4 to Divi 5 will only be supported till Divi 5 Public Alpha 14. If you are planning to upgrade your site or plugins, please make sure to complete the migration process before Alpha 14. After this point, direct migration from Divi 4 will no longer be available, and this may lead to compatibility issues.
 
 == Upgrade Notice ==
-
-= Version 1.3.0 | 27 July 2026 =
-
-- New: Introduced a“Get Started”onboarding page for a smoother setup experience.
-- New: Added a guided sample timeline demo creation flow to help users get started quickly.
-- Removed: Removed the legacy dashboard and replaced it with the new onboarding experience.
-- Improved: Simplified the initial setup process with a quick-start demo.
-
+= Version 1.3.1 | 07 September 2026 =
+- Improved: Review notice and feedback form design for a better user experience..
 
